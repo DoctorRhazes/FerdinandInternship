@@ -66,18 +66,7 @@ git init C://Iwork/python//git
 -> initialisiere lokale Repo in dem Ordner	
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/DoctorRhazes/FerdinandInternship.git
--> "origin" existiert schon!
-git remote add Neu https://github.com/DoctorRhazes/FerdinandInternship.git
--> passt
-git push -u origin master
--> Username in github wird abgefragt 
--> Passwort wird abgefragt
 
-…or push an existing repository from the command line
-
-git remote add origin https://github.com/DoctorRhazes/FerdinandInternship.git
-git push -u origin master
 
 dir/cd/ etc
 
@@ -87,14 +76,11 @@ ls
 git diff
 -> '-' etwas wurde weggenommen, '+' etwas wurde zugegeben
 -> Git am Ende der gezeigten Changes angekommen: q für quit (gibt andere optionen wie e für examine zB)
-
 -> commit -> hat HashValue
 -> repository commits im Internet werden lokal übertragen wenn clone repo
-
 git status
 -> zeigt welcher Branch
 -> "Branch is ahead of Branch xy by soundsoviele commits"
-
 git log
 -> zeigt letzten commit
 
@@ -120,10 +106,11 @@ git remote add [Name neue repo] [Gitpfad]
 git remote get-url [Name neue repo zuerst mit remote angelegt]
 -> gibt [Gitpfad] zurück
 
-git push [Name neue repo zuerst mit remote angelegt] [lokaler Branch]
--> pusht
-
-
+git push [Name neue repo zuerst mit remote add angelegt] [lokaler Branch]
+-> pusht -> falls der lokale Branch online nicht existiert, wird er online neu erstellt!
+-> "everything up-to-date" wenn online ident mit lokal
+git push -u [Name neue repo zuerst mit remote add angelegt] [lokaler Branch]
+-> muss man beim nächsten mal dank -u nur "git push" schreiben!
 
 git pull -> Kombination von 2 Commands: 1. git fetch
 git fetch
@@ -152,3 +139,5 @@ git branch -D [lokaler Branchname]
 -> löscht den Branch
 git remote remove [remote-Name]
 ->löscht unsinnige remote Namen für repos!
+
+Problem: origin hat falsche Adresse gespeichert!
