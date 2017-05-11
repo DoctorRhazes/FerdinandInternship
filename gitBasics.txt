@@ -1,7 +1,154 @@
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 
-git init
+git init 
+-> git starten
+git status 
+-> befinden sich "untracked files" im Ordner?
 git add [Datei]
+-> git add Datei
 git status
+-> "Changes to be commited: " scheint auf
+-> Dateien befinden sich in "Staging Area"
+git commit -m "commit this shit!"
+-> Dateien in der Staging Area werden "committed"
+git add '*.txt' 
+-> add alle Textfiles
+git commit -m "commite alle files"
+-> alle ausgewählten Textfiles in staging area committen
+git log
+-> Aufzeichnung der bisherigen Schritte
+$ git remote add origin https://github.com/try-git/try_git.git
+-> commits pushen, origin ist??? dann kommt repository URL
+$ git push -u origin master
+-> "origin" ist der name der repository und master der default name des local branch
+-> -u erinnert sich an die übergebenen Parameter, sodass git push nächstes mal dasselbe tut
+-> wie der Befehl jetzt
+$ git pull origin master
+-> Schauen was für neue Änderungen gepusht wurden zB von Teammitgliedern
+$ git diff HEAD
+-> Differenz zum letzten eigenen commit, der anscheinend "HEAD" heißt
+$ git add octofamily/octodog.txt
+-> nächste Datei in Staging Area
+$ git diff --staged
+-> Schauen welche Änderungen sich in der Staging Area ergeben haben
+$ git reset octofamily/octodog.txt
+-> Staging von Octodog rückgängig gemacht
+$ git checkout -- octocat.txt
+-> Datei octocat wird zurückgesetzt auf den Stand vom letzten commit
+$ git branch clean_up
+-> Neuer branch clean_up wird eröffnet
+$ git branch
+-> Zwei branches: master und clean_up
+$ git checkout clean_up
+-> befindet sich nun im clean_up branch
+$ git rm "*.txt*
+-> alle dateien aus dem branch löschen
+$ git status
+-> schauen was sich geändert hat
+$ git commit -m "commit changes"
+-> Änderungen auf commit setzen
+$ git checkout master
+-> In den Masterbranch wechseln
+$ git merge clean_up
+-> Mit dem Branch clean_up zurammenführen
+$ git branch -d clean_up
+-> delete clean_up
+$ git push
+-> Änderungen vorwärtspushen
+
+GIT Vorschläge wie man eine Respository anlegt:
+…or create a new repository on the command line
+
+echo "# FerdinandInternship" >> README.md 
+-> Das erzeugt auch gleich die ReadMe Datei!
+git init C://Iwork/python//git
+-> initialisiere lokale Repo in dem Ordner	
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/DoctorRhazes/FerdinandInternship.git
+-> "origin" existiert schon!
+git remote add Neu https://github.com/DoctorRhazes/FerdinandInternship.git
+-> passt
+git push -u origin master
+-> Username in github wird abgefragt 
+-> Passwort wird abgefragt
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/DoctorRhazes/FerdinandInternship.git
+git push -u origin master
+
 dir/cd/ etc
+
+ls
+-> listet dateien im Ordner
+
+git diff
+-> '-' etwas wurde weggenommen, '+' etwas wurde zugegeben
+-> Git am Ende der gezeigten Changes angekommen: q für quit (gibt andere optionen wie e für examine zB)
+
+-> commit -> hat HashValue
+-> repository commits im Internet werden lokal übertragen wenn clone repo
+
+git status
+-> zeigt welcher Branch
+-> "Branch is ahead of Branch xy by soundsoviele commits"
+
+git log
+-> zeigt letzten commit
+
+mkdir tesfolder
+cd testfolder
+-> ausprobieren in neuem Ordner: git repo klonen
+git clone [pfad]
+-> [pfad] = https://github.com/[UserName]/[RepoName].git
+
+git branch
+-> zeigt aktuellen Branch
+git branch [Name]
+-> macht branch auf
+git checkout [BranchName]
+-> auf den Branch wechseln
+
+touch [Dateiname]
+-> macht Datei
+
+git remote add [Name neue repo] [Gitpfad]
+->git remote add origin https://github.com/ipython/ipython-in-depth
+
+git remote get-url [Name neue repo zuerst mit remote angelegt]
+-> gibt [Gitpfad] zurück
+
+git push [Name neue repo zuerst mit remote angelegt] [lokaler Branch]
+-> pusht
+
+
+
+git pull -> Kombination von 2 Commands: 1. git fetch
+git fetch
+-> lokale repository kontaktiert github repo
+git diff [lokaler Branch, Anfangs: master] [Branch in guthub den man mit fetch sieht]
+git diff [lokaler Branch, Anfangs: master] [Branch in guthub den man mit fetch sieht] --name-only
+-> zeigt nur betroffene Dateien an!
+git merge [lokaler Branch, Anfangs: master] [Branch in guthub den man mit fetch sieht]
+-> merged Internet und lokal, zeigt "already up-to-date" wenn es so ist
+git pull [sonstnix]
+-> kombiniert diff und merge
+git remote -v
+-> zeigt die Repositories auf meinem github an!
+git push [remote repo NAME] [lokaler Branch]
+-> [remote] kann eben mit git -v remote angezeigt werden, welche Optionen es gibt!
+-> Der lokale Branch wird dem Branch in der remote Repo HINZUGEFÜGT!
+-> ist der Name des remote Branches und des lokalen Branches IDENTISCH wird der remote branch über push auf den Stand gebracht!!
+git pull [remote repo NAME, anzeigen mit git remote -v] [lokaler Branch]
+
+
+[git push Neu2 master pusht die lokalen changes auf den Branch master der online-repo. Wie geht das vor sich?)
+[IST Neu2 der branch master, obwohl das als branch aufscheint???]
+-> Files werden lokal mit denen im Internet synchronisiert!
+
+git branch -D [lokaler Branchname]
+-> löscht den Branch
+git remote remove [remote-Name]
+->löscht unsinnige remote Namen für repos!
