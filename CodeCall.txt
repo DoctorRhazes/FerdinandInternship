@@ -1,0 +1,8 @@
+a = np.array([-2.5, 3, 4, 4])
+for func in (a.min, a.max, a.sum, a.prod, a.std, a.var):
+    print(func.__name__, "=", func())
+den call find ich super elegant~
+you can also iterate over a list of functions and  call them like this...
+for f in (np.abs, np.log, np.exp, np.sign, np.ceil, np.modf, np.isnan, np.cos):
+    print("\n", f.__name__)
+    print(f(a))
