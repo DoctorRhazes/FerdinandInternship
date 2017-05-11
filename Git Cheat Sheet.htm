@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="wf-proximanova-n1-active wf-proximanova-n4-active wf-proximanova-n3-active wf-active" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Git Cheat Sheet</title>
+
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://www.git-tower.com/blog/assets/img/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+    <meta name="description" content="Tower Blog - About Web and Software Development, Marketing and Design">
+    <meta name="keywords" content="git, mac, client, gui, git client, git app, git gui, vcs, version control">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Git Cheat Sheet">
+<meta property="og:image" content="https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/_header.jpg">
+<meta property="og:description" content=" Download our free cheat sheet for Git. Because even with a GUI application at hand, there are times when you resort to the command line. We admit we can’t memorize all important Git commands – that’s why we created a nice cheat sheet for Git that we would like to share with you.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@fournova">
+<meta name="twitter:title" content="Git Cheat Sheet">
+<meta name="twitter:description" content=" Download our free cheat sheet for Git. Because even with a GUI application at hand, there are times when you resort to the command line. We admit we can’t memorize all important Git commands – that’s why we created a nice cheat sheet for Git that we would like to share with you.">
+<meta name="twitter:image:src" content="https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/_header.jpg">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Tower Blog" href="http://feeds.git-tower.com/tower-blog">
+    
+    <!-- CSS inclusions -->
+    <link rel="stylesheet" href="Git%20Cheat%20Sheet-Dateien/post.css">
+    <!-- Javascript inclusions -->
+    <script async="" src="Git%20Cheat%20Sheet-Dateien/fbevents.js"></script><script async="" src="Git%20Cheat%20Sheet-Dateien/uwt.js"></script><script type="text/javascript" async="" src="Git%20Cheat%20Sheet-Dateien/conversion_async.js"></script><script type="text/javascript" async="" src="Git%20Cheat%20Sheet-Dateien/analytics.js"></script><script async="" src="Git%20Cheat%20Sheet-Dateien/gtm.js"></script><script src="Git%20Cheat%20Sheet-Dateien/jquery.js"></script>
+    <script src="Git%20Cheat%20Sheet-Dateien/post-min.js"></script>    <script type="text/javascript">
+  (function() {
+    var config = {
+      kitId: 'zdf0zrl'
+    };
+    $.ajax({
+      url: '//use.typekit.net/' + config.kitId + '.js',
+      dataType: 'script',
+      cache: true,
+      success: function() {
+        try { Typekit.load(config); } catch (e) {}
+      }
+    });
+  })();
+</script><style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/b18774/00000000000000003b9ad1bd/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff2"),url(https://use.typekit.net/af/b18774/00000000000000003b9ad1bd/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("woff"),url(https://use.typekit.net/af/b18774/00000000000000003b9ad1bd/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n1&v=3) format("opentype");font-weight:100;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/edab9a/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/edab9a/00000000000000003b9ad1b9/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/edab9a/00000000000000003b9ad1b9/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://use.typekit.net/af/015ec8/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/015ec8/00000000000000003b9ad1b5/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/015ec8/00000000000000003b9ad1b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}</style>
+  </head>
+
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WHXSHB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WHXSHB');</script>
+    <!-- End Google Tag Manager -->
+  	<!--[if lt IE 8]>
+  		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  	<![endif]-->
+<div class="row-wrapper row-wrapper__navigation row-wrapper__navigation--default">
+  <div class="outer-container">
+    <nav>
+      <div id="nav-toggle"></div>
+      <div id="logo" onclick="location.href='https://www.git-tower.com/blog';"></div>
+      <ul>
+        <li><a class="tower-site-link analytics--click" href="https://www.git-tower.com/?utm_source=Tower+Blog&amp;utm_medium=navigation&amp;utm_campaign=Tower">Tower Git Client</a></li>
+        <!--<li><a href="">Stuff Store</a></li>-->
+        <li><a href="https://www.fournova.com/">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<aside id="sharing-sidebar" style="right: -6px;">
+  <a class="button social-button--twitter analytics--click" onclick="FN.socialShare('twitter', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+  <a class="button social-button--googleplus analytics--click" onclick="FN.socialShare('google+', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+  <a class="button social-button--facebook analytics--click" onclick="FN.socialShare('facebook', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+  <a class="button social-button--linkedin analytics--click" onclick="FN.socialShare('linkedin', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+</aside><div class="row-wrapper row-wrapper__post-header">
+  <div class="outer-container">
+    <header></header>
+        <style type="text/css">
+      .row-wrapper__post-header {
+        background-color: #626C7C;
+      }
+    </style>
+        <style type="text/css">
+header {
+  background-image:url(https://tower-website-ftkdppxp1xaznovg.netdna-ssl.com/blog/posts/git-cheat-sheet/_header.jpg);
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+  header {
+    background-image:url(https://tower-website-ftkdppxp1xaznovg.netdna-ssl.com/blog/posts/git-cheat-sheet/_header%402x.jpg);
+  }
+}
+</style>
+  </div>
+</div>
+
+<div class="row-wrapper row-wrapper__sharing-topbar" style="">
+  <div class="outer-container">
+    <section id="sharing-topbar">
+      <div id="sharing-topbar__wrapper">
+        <a class="button social-button--twitter analytics--click" onclick="FN.socialShare('twitter', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+        <a class="button social-button--googleplus analytics--click" onclick="FN.socialShare('google+', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+        <a class="button social-button--facebook analytics--click" onclick="FN.socialShare('facebook', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+        <a class="button social-button--linkedin analytics--click" onclick="FN.socialShare('linkedin', false, 'Git Cheat Sheet');" href="javascript:void(0);"></a>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="row-wrapper row-wrapper__post-content">
+  <div class="outer-container">
+    <article id="post-detail">
+      <div class="meta">February 2017 by Tobias Günther</div>
+      <h1 style="">Git Cheat Sheet</h1>
+      <div class="intro"><p>Our Git cheat sheet saves you from learning all the commands by heart. Download it for free.</p></div>
+      <div class="content">
+        <p>Even with a GUI application like <a href="https://www.git-tower.com/" target="_blank">Tower</a>
+ at hand there are times when you resort to the command line. We admit 
+we can’t memorize all important Git commands – that’s why we created a 
+nice cheat sheet for Git that we would like to share with you.<br>
+On the front you can find all important commands. On the back you can 
+find our Version Control Best Practices that help you get the most out 
+of version control with Git.</p>
+<p>Available in English | <a href="https://www.git-tower.com/blog/git-cheat-sheet-de">Deutsch</a> | <a href="https://www.git-tower.com/blog/git-cheat-sheet-pt">Português</a> | <a href="https://www.git-tower.com/blog/git-cheat-sheet-ar">العربية</a> | <a href="https://www.git-tower.com/blog/git-cheat-sheet-cn">Chinese</a>.</p>
+<div class="signup--gift incentive--cheatsheet-package incentive--git-cheatsheet">  <div class="signup--gift__join--email">    <div class="signup--gift__image"><img src="Git%20Cheat%20Sheet-Dateien/signup-thumb.png"></div>  <div class="signup--gift__content">    <div class="signup--gift__text">      <h2>Download the Cheat Sheet</h2>      <p>Sign up for our free "Cheat Sheet Package" - and get 6 of our most popuplar Cheat Sheets right to your inbox!</p>     </div><form class="newsletter-form analytics--submit" autocomplete="off">
+  <input name="action" value="subscribe" type="hidden">
+  <input name="listName" value="tower" type="hidden">
+
+    <div class="newsletter-form__groups">
+        <div class="row" style="display:none">
+      <input class="signup-group__item" name="groups[bbaf4a85c4]" value="1" checked="checked" id="signup-group_bbaf4a85c4" type="checkbox"> 
+      <label for="signup-group_bbaf4a85c4">Tower &amp; fournova updates</label>
+    </div>
+        <div class="row" style="display:none">
+      <input class="signup-group__item" name="groups[ad737e3518]" value="1" checked="checked" id="signup-group_ad737e3518" type="checkbox"> 
+      <label for="signup-group_ad737e3518">New content and updates</label>
+    </div>
+      </div>
+
+  <div class="newsletter-form__signup">
+    <input name="email" placeholder="Your email address" type="text">
+    <input value="" class="newsletter-form__signup-button" type="submit">
+  </div>
+
+    <input name="source[product]" value="tower-blog" type="hidden">
+      <input name="source[URI]" value="git-cheat-sheet" type="hidden">
+      <input name="source[OS]" value="windows" type="hidden">
+      <input name="tags[I_CHEATPKG]" value="true" type="hidden">
+    <h6 class="request-notice">
+    We won't send you spam. Unsubscribe at any time.  </h6>
+</form>
+    </div>  </div></div>
+<p><br></p>
+<figure><img src="Git%20Cheat%20Sheet-Dateien/git-cheat-sheet-large01.png" alt=""></figure>
+<p><br></p>
+<figure><img src="Git%20Cheat%20Sheet-Dateien/git-cheat-sheet-large02.png" alt=""></figure>
+<div class="signup--gift incentive--cheatsheet-package incentive--git-cheatsheet">  <div class="signup--gift__join--email">    <div class="signup--gift__image"><img src="Git%20Cheat%20Sheet-Dateien/signup-thumb.png"></div>  <div class="signup--gift__content">    <div class="signup--gift__text">      <h2>Download the Cheat Sheet</h2>      <p>Sign up for our free "Cheat Sheet Package" - and get 6 of our most popuplar Cheat Sheets right to your inbox!</p>     </div><form class="newsletter-form analytics--submit" autocomplete="off">
+  <input name="action" value="subscribe" type="hidden">
+  <input name="listName" value="tower" type="hidden">
+
+    <div class="newsletter-form__groups">
+        <div class="row" style="display:none">
+      <input class="signup-group__item" name="groups[bbaf4a85c4]" value="1" checked="checked" id="signup-group_bbaf4a85c4" type="checkbox"> 
+      <label for="signup-group_bbaf4a85c4">Tower &amp; fournova updates</label>
+    </div>
+        <div class="row" style="display:none">
+      <input class="signup-group__item" name="groups[ad737e3518]" value="1" checked="checked" id="signup-group_ad737e3518" type="checkbox"> 
+      <label for="signup-group_ad737e3518">New content and updates</label>
+    </div>
+      </div>
+
+  <div class="newsletter-form__signup">
+    <input name="email" placeholder="Your email address" type="text">
+    <input value="" class="newsletter-form__signup-button" type="submit">
+  </div>
+
+    <input name="source[product]" value="tower-blog" type="hidden">
+      <input name="source[URI]" value="git-cheat-sheet" type="hidden">
+      <input name="source[OS]" value="windows" type="hidden">
+      <input name="tags[I_CHEATPKG]" value="true" type="hidden">
+    <h6 class="request-notice">
+    We won't send you spam. Unsubscribe at any time.  </h6>
+</form>
+    </div>  </div></div>      </div>
+    </article>
+  </div>
+</div>
+
+<div class="row-wrapper row-wrapper__post-footer">
+  <div class="outer-container">
+    <section class="footer-container footer-container--left">
+      <h3>We make Tower</h3>
+      <p class="footer-container__subline">…the best Git client for Mac and Windows.</p>
+      <div class="footer-container--left__image"></div>
+      <div class="footer-container--left__content">
+        <p>We help over 80,000 users in companies like Apple, Google, 
+Amazon, Twitter, and Facebook to easily &amp; productively work with the
+ Git version control system.</p>
+        <a class="tower-site-link analytics--click" href="https://www.git-tower.com/?utm_source=Tower+Blog&amp;utm_medium=article+footer&amp;utm_campaign=Tower" target="_blank">Try it 30 days for free!</a>
+      </div>
+    </section>
+    <section class="footer-container footer-container--right">
+      <h3>Read next</h3>
+      <p class="footer-container__subline">…popular &amp; related articles.</p>
+      <ul>
+      <li><a class="read-next-link analytics--click" href="https://www.git-tower.com/blog/may-the-fork-be-with-you">› May the Fork Be with You</a></li><li><a class="read-next-link analytics--click" href="https://www.git-tower.com/blog/diff-tools-mac">› Diff Tools on macOS</a></li>      </ul>
+    </section>
+  </div>
+</div>
+    <div class="row-wrapper footer-wrap">
+      <div class="outer-container">
+        <footer>
+          <p>© 2011-2017 <a href="http://www.fournova.com/" target="_blank">fournova Software GmbH</a></p>          <p>Mentioned product names and logos are property of their respective owners.</p>
+          <p><a href="https://www.git-tower.com/blog/imprint">imprint / legal notice</a></p>
+        </footer>
+      </div>
+    </div>
+
+  
+
+<div style="display: none; visibility: hidden;">
+<script>!function(b,c,d,a){b.twq||(a=b.twq=function(){a.exe?a.exe.apply(a,arguments):a.queue.push(arguments)},a.version="1",a.queue=[],t=c.createElement(d),t.async=!0,t.src="//static.ads-twitter.com/uwt.js",s=c.getElementsByTagName(d)[0],s.parentNode.insertBefore(t,s))}(window,document,"script");twq("init","nv7i5");twq("track","PageView");</script>
+</div>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","545953992196333");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=545953992196333&amp;ev=PageView&amp;noscript=1"></noscript>
+<div id="fn-popup-tower-win-launch" class="fn-popup fn-popup--sidebar">  <div class="fn-popup__close"><div class="fn-popup__close__button"></div></div><div class="fn-popup__content fn-popup__content--1" style="display: block;"><div class="fn-popup__text"><img src="Git%20Cheat%20Sheet-Dateien/tower-arrived-on-windows2x.png" height="253" width="207"></div><div class="fn-popup__button"><a class="fn-popup__button--link analytics--click">Try it 30 Days for Free</a></div></div></div><script src="Git%20Cheat%20Sheet-Dateien/adsct" type="text/javascript"></script></body></html>
