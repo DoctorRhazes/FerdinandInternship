@@ -140,5 +140,6 @@ git remote -v
 git push [remote repo im Internet] [lokaler Branch]
 -> [remote] kann eben mit git -v remote angezeigt werden, welche Optionen es gibt!
 -> Der lokale Branch wird dem Branch in der remote Repo HINZUGEFÜGT!
+-> ist der Name des remote Branches und des lokalen Branches IDENTISCH wird der remote branch über push auf den Stand gebracht!!
 git pull [remote repo im Internet, anzeigen mit git remote -v] [lokaler Branch]
 -> Files werden lokal mit denen im Internet synchronisiert!
