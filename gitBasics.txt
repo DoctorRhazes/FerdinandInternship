@@ -1,3 +1,4 @@
+xy
 $ git config --global user.name "John Doe"
 $ git config --global user.email johndoe@example.com
 
@@ -126,18 +127,14 @@ git remote -v
 -> zeigt die Repositories auf meinem github an!
 git push [remote repo NAME] [lokaler Branch]
 -> [remote] kann eben mit git -v remote angezeigt werden, welche Optionen es gibt!
--> Der lokale Branch wird dem Branch in der remote Repo HINZUGEFÜGT!
+-> Der lokale Branch wird dem Branch in der remote Repo HINZUGEFÜGT wenn es ihn dort noch nicht gibt!
 -> ist der Name des remote Branches und des lokalen Branches IDENTISCH wird der remote branch über push auf den Stand gebracht!!
 git pull [remote repo NAME, anzeigen mit git remote -v] [lokaler Branch]
 
-
-[git push Neu2 master pusht die lokalen changes auf den Branch master der online-repo. Wie geht das vor sich?)
-[IST Neu2 der branch master, obwohl das als branch aufscheint???]
--> Files werden lokal mit denen im Internet synchronisiert!
 
 git branch -D [lokaler Branchname]
 -> löscht den Branch
 git remote remove [remote-Name]
 ->löscht unsinnige remote Namen für repos!
 
-Problem: origin hat falsche Adresse gespeichert!
+
