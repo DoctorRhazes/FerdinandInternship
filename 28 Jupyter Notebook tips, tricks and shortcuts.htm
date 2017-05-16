@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html class="wf-industry-n4-active wf-ingra-n4-active wf-freighttextpro-n4-active wf-freighttextpro-n7-active wf-merriweather-n7-active wf-merriweather-n3-active wf-industry-n2-active wf-ingra-n2-active wf-active"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" async="" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/analytics_002.js"></script><script type="text/javascript" async="" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/analytics.js"></script><script src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/nmj4kuc.js"></script>
+    <style type="text/css">.tk-freight-text-pro{font-family:"freight-text-pro",serif;}.tk-merriweather{font-family:"merriweather",serif;}.tk-industry{font-family:"industry",sans-serif;}.tk-ingra{font-family:"ingra",sans-serif;}</style><style type="text/css">@font-face{font-family:freight-text-pro;src:url(https://use.typekit.net/af/8a8db0/000000000000000000012059/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/8a8db0/000000000000000000012059/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/8a8db0/000000000000000000012059/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:freight-text-pro;src:url(https://use.typekit.net/af/684e08/00000000000000000001205b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/684e08/00000000000000000001205b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/684e08/00000000000000000001205b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:merriweather;src:url(https://use.typekit.net/af/363185/000000000000000000014a3f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"),url(https://use.typekit.net/af/363185/000000000000000000014a3f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"),url(https://use.typekit.net/af/363185/000000000000000000014a3f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");font-weight:700;font-style:normal;}@font-face{font-family:merriweather;src:url(https://use.typekit.net/af/a2482c/000000000000000000014a3b/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/a2482c/000000000000000000014a3b/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/a2482c/000000000000000000014a3b/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3) format("opentype");font-weight:300;font-style:normal;}@font-face{font-family:industry;src:url(https://use.typekit.net/af/fa8044/00000000000000003b9adf53/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/fa8044/00000000000000003b9adf53/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/fa8044/00000000000000003b9adf53/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}@font-face{font-family:industry;src:url(https://use.typekit.net/af/79fedc/00000000000000003b9adf4e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("woff2"),url(https://use.typekit.net/af/79fedc/00000000000000003b9adf4e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("woff"),url(https://use.typekit.net/af/79fedc/00000000000000003b9adf4e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("opentype");font-weight:200;font-style:normal;}@font-face{font-family:ingra;src:url(https://use.typekit.net/af/961c56/00000000000000003b9acd66/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("woff2"),url(https://use.typekit.net/af/961c56/00000000000000003b9acd66/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("woff"),url(https://use.typekit.net/af/961c56/00000000000000003b9acd66/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n2&v=3) format("opentype");font-weight:200;font-style:normal;}@font-face{font-family:ingra;src:url(https://use.typekit.net/af/6f9804/00000000000000003b9acd68/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/6f9804/00000000000000003b9acd68/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/6f9804/00000000000000003b9acd68/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");font-weight:400;font-style:normal;}</style><script>try{Typekit.load({ async: false });}catch(e){}</script>
+
+    <link rel="stylesheet" type="text/css" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/screen.css">
+    <link rel="stylesheet" type="text/css" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/css.css">
+    <!-- Customisation  -->
+    <link rel="stylesheet" type="text/css" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/main.css">
+    <link rel="stylesheet" type="text/css" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/grid.css">
+    <link rel="stylesheet" type="text/css" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/jupyter.css">
+    <script src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/MathJax.js" id="">
+</script>
+<script type="text/javascript" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/jquery_002.js"></script>
+
+<script type="text/x-mathjax-config;executed=true">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            processEnvironments: true
+        },
+        // Center justify equations in code and markdown cells. Elsewhere
+        // we use CSS to left justify single line equations in code cells.
+        displayAlign: 'center',
+        "HTML-CSS": {
+            styles: {'.MathJax_Display': {"margin": 0}},
+            linebreaks: { automatic: true }
+        }
+    });
+</script>
+
+    <!-- Begin Jekyll SEO tag v2.2.0 -->
+<meta property="og:title" content="28 Jupyter Notebook tips, tricks and shortcuts">
+<meta property="og:locale" content="en_US">
+<meta name="description" content="Jupyter Notebook is a powerful tool for data analysis. We share with you 28 tips, tricks and shortcuts to turn you into a Jupyter power user!">
+<meta property="og:description" content="Jupyter Notebook is a powerful tool for data analysis. We share with you 28 tips, tricks and shortcuts to turn you into a Jupyter power user!">
+<link rel="canonical" href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">
+<meta property="og:url" content="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/">
+<meta property="og:site_name" content="Data Science Blog: Dataquest">
+<meta property="og:image" content="https://www.dataquest.io/blog/images/social_share/jupyter_tips.jpg">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2016-10-12T13:00:00+00:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dataquestio">
+<meta name="twitter:creator" content="@jaypeedevlin">
+<meta property="article:publisher" content="937097596357357">
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "28 Jupyter Notebook tips, tricks and shortcuts",
+"author": {"@type": "Person",
+"name": "josh"},
+"image": "https://www.dataquest.io/blog/images/social_share/jupyter_tips.jpg",
+"datePublished": "2016-10-12T13:00:00+00:00",
+"description": "Jupyter Notebook is a powerful tool for data analysis. We share with you 28 tips, tricks and shortcuts to turn you into a Jupyter power user!",
+"mainEntityOfPage": {"@type": "WebPage",
+"@id": "https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/"},
+"url": "https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    
+    <link rel="home" type="application/rss+xml" href="https://www.dataquest.io/blog/feed.xml">
+    
+    <title>
+        
+            28 Jupyter Notebook tips, tricks and shortcuts
+        
+    </title>
+<script src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/embed.js" data-timestamp="1494587099669"></script><link rel="prefetch" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/a_data/lounge.css"><link rel="prefetch" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/a_data/common.js"><link rel="prefetch" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/a_data/lounge.js"><link rel="prefetch" href="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/a_data/config.js"><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 0; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class="home-template"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px none; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+    <header class="main-header post-head ">
+    <nav class="main-nav overlay clearfix left-nav">
+        <a class="back-button icon-arrow-left" href="https://www.dataquest.io/blog/">Blog Home</a>
+        <a class="subscribe-button" href="https://www.dataquest.io/">Dataquest.io</a>
+    </nav>
+    <nav class="main-nav overlay right-nav">
+        <a class="subscribe-button cta-button" href="https://www.dataquest.io/">Learn Data Science in Your Browser</a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+        <header class="post-header">
+            <img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/jupyter-notebook.png" class="post-icon" alt="28 Jupyter Notebook tips, tricks and shortcuts">
+            <h1 class="post-title">28 Jupyter Notebook tips, tricks and shortcuts</h1>
+        </header>
+        <section class="post-meta">
+            
+              
+              Josh Devlin
+            
+            <time class="post-date" datetime="2016-10-12">12 Oct 2016</time>
+            
+            in resources and guides
+            
+        </section>
+
+<!--         <header class="post-header">
+            <a id="blog-logo" href="https://www.dataquest.io">
+                
+                    <span class="blog-title">Data Science Blog: Dataquest</span>
+                 
+            </a>
+        </header> -->
+        
+        <!-- <span class="post-meta">
+            <time datetime="2016-10-12">12 Oct 2016</time>
+             
+                on resources and guides 
+            
+        </span> -->
+
+        <!-- <h1 class="post-title">28 Jupyter Notebook tips, tricks and shortcuts</h1> -->
+
+        <section class="post-content">
+            <p><em>This post is based on a post that originally appeared on <a href="http://arogozhnikov.github.io/2016/09/10/jupyter-features.html">Alex Rogozhnikov’s blog, ‘Brilliantly Wrong’</a>.</em></p>
+
+<p><em>We have expanded the post and will continue to do so over time - 
+if you have a suggestion please let us know in the comments.  Thanks to 
+Alex for graciously letting us republish his work here.</em></p>
+
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+
+<p>Jupyter notebook, formerly known as the IPython notebook, is a 
+flexible tool that helps you create readable analyses, as you can keep 
+code, images, comments, formulae and plots together.</p>
+
+<p>Jupyter is quite extensible, supports many programming languages and 
+is easily hosted on your computer or on almost any server — you only 
+need to have ssh or http access. Best of all, it’s completely free.</p>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/interface-screenshot.png" class="full-img">
+        <p><i>The Jupyter interface.</i></p>
+    </div>
+</div>
+
+<p>Project Jupyter was born out of the IPython project as the project 
+evolved to become a notebook that could support multiple languages - 
+hence its historical name as the IPython notebook. The name Jupyter is 
+an indirect acronyum of the three core languages it was designed for: <strong>JU</strong>lia, <strong>PYT</strong>hon, and <strong>R</strong> and is inspired by the planet Jupiter.</p>
+
+<p>When working with Python in Jupyter, the IPython kernel is used, 
+which gives us some handy access to IPython features from within our 
+Jupyter notebooks (more on that later!)</p>
+
+<p>We’re going to show you 28 tips and tricks to make your life working with Jupyter easier.</p>
+
+<h2 id="1-keyboard-shortcuts">1. Keyboard Shortcuts</h2>
+
+<p>As any power user knows, keyboard shortcuts will save you lots of 
+time.  Jupyter stores a list of keybord shortcuts under the menu at the 
+top: <code class="highlighter-rouge">Help &gt; Keyboard Shortcuts</code>, or by pressing <code class="highlighter-rouge">H</code>
+ in command mode (more on that later).  It’s worth checking this each 
+time you update Jupyter, as more shortcuts are added all the time.</p>
+
+<p>Another way to access keyboard shortcuts, and a handy way to learn them is to use the command palette: <code class="highlighter-rouge">Cmd + Shift + P</code> (or <code class="highlighter-rouge">Ctrl + Shift + P</code>
+ on Linux and Windows).  This dialog box helps you run any command by 
+name - useful if you don’t know the keyboard shortcut for an action or 
+if what you want to do does not have a keyboard shortcut.  The 
+functionality is similar to Spotlight search on a Mac, and once you 
+start using it you’ll wonder how you lived without it!</p>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <img class="gif" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/command-palette.gif">
+        <img class="preview" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/command-palette.png">
+        <p><i>The command palette.</i></p>
+    </div>
+</div>
+
+<p>Some of my favorites:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">Esc</code> will take you into command mode where you can navigate around your notebook with arrow keys.</li>
+  <li>While in command mode:
+    <ul>
+      <li><code class="highlighter-rouge">A</code> to insert a new cell above the current cell, <code class="highlighter-rouge">B</code> to insert a new cell below.</li>
+      <li><code class="highlighter-rouge">M</code> to change the current cell to Markdown, <code class="highlighter-rouge">Y</code> to change it back to code</li>
+      <li><code class="highlighter-rouge">D + D</code> (press the key twice) to delete the current cell</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">Enter</code> will take you from command mode back into edit mode for the given cell.</li>
+  <li><code class="highlighter-rouge">Shift = Tab</code> will show you 
+the Docstring (documentation) for the the object you have just typed in a
+ code cell - you can keep pressing this short cut to cycle through a few
+ modes of documentation.</li>
+  <li><code class="highlighter-rouge">Ctrl + Shift + -</code> will split the current cell into two from where your cursor is.</li>
+  <li><code class="highlighter-rouge">Esc + F</code> Find and replace on your code but not the outputs.</li>
+  <li><code class="highlighter-rouge">Esc + O</code> Toggle cell output.</li>
+  <li>Select Multiple Cells:
+    <ul>
+      <li><code class="highlighter-rouge">Shift + J</code> or <code class="highlighter-rouge">Shift + Down</code> selects the next sell in a downwards direction. You can also select sells in an upwards direction by using <code class="highlighter-rouge">Shift + K</code> or <code class="highlighter-rouge">Shift + Up</code>.</li>
+      <li>Once cells are selected, you can then delete / copy / cut / 
+paste / run them as a batch. This is helpful when you need to move parts
+ of a notebook.</li>
+      <li>You can also use <code class="highlighter-rouge">Shift + M</code> to merge multiple cells.</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <img class="gif" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/multi-merge.gif">
+        <img class="preview" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/multi-merge.png">
+        <p><i>Merging multiple cells.</i></p>
+    </div>
+</div>
+
+<h2 id="2-pretty-display-of-variables">2. Pretty Display of Variables</h2>
+
+<p>The first part of this is pretty widely known. By finishing a Jupyter
+ cell with the name of a variable or unassigned output of a statement, 
+Jupyter will display that variable without the need for a print 
+statement.  This is especially useful when dealing with Pandas 
+DataFrames, as the output is neatly formatted into a table.</p>
+
+<p>What is known less, is that you can alter a modify the <code class="highlighter-rouge">ast_note_interactivity</code>
+ kernel option to make jupyter do this for any variable or statement on 
+it’s own line, so you can see the value of multiple statements at once.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.core.interactiveshell</span> <span class="k">import</span> <span class="n">InteractiveShell</span>
+<span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s2">"all"</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pydataset</span> <span class="k">import</span> <span class="n">data</span>
+<span class="n">quakes</span> <span class="o">=</span> <span class="n">data</span><span class="p">(</span><span class="s1">'quakes'</span><span class="p">)</span>
+<span class="n">quakes</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">quakes</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>lat</th>
+      <th>long</th>
+      <th>depth</th>
+      <th>mag</th>
+      <th>stations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>-20.42</td>
+      <td>181.62</td>
+      <td>562</td>
+      <td>4.8</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>-20.62</td>
+      <td>181.03</td>
+      <td>650</td>
+      <td>4.2</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>-26.00</td>
+      <td>184.10</td>
+      <td>42</td>
+      <td>5.4</td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>-17.97</td>
+      <td>181.66</td>
+      <td>626</td>
+      <td>4.1</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>-20.42</td>
+      <td>181.96</td>
+      <td>649</td>
+      <td>4.0</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<table class="dataframe" border="1">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>lat</th>
+      <th>long</th>
+      <th>depth</th>
+      <th>mag</th>
+      <th>stations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>996</th>
+      <td>-25.93</td>
+      <td>179.54</td>
+      <td>470</td>
+      <td>4.4</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>-12.28</td>
+      <td>167.06</td>
+      <td>248</td>
+      <td>4.7</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>-20.13</td>
+      <td>184.20</td>
+      <td>244</td>
+      <td>4.5</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>-17.40</td>
+      <td>187.80</td>
+      <td>40</td>
+      <td>4.5</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>-21.59</td>
+      <td>170.56</td>
+      <td>165</td>
+      <td>6.0</td>
+      <td>119</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div></div></div></div>
+
+<p>If you want to set this behaviour for all instances of Jupyter (Notebook and Console), simply create a file <code class="highlighter-rouge">~/.ipython/profile_default/ipython_config.py</code> with the lines below.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">c</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+
+<span class="c"># Run all nodes interactively</span>
+<span class="n">c</span><span class="o">.</span><span class="n">InteractiveShell</span><span class="o">.</span><span class="n">ast_node_interactivity</span> <span class="o">=</span> <span class="s">"all"</span></code></pre></figure>
+
+<h2 id="3-easy-links-to-documentation">3. Easy links to documentation</h2>
+
+<p>Inside the <code class="highlighter-rouge">Help</code> menu you’ll find handy links to the online documentation for common libraries including NumPy, Pandas, SciPy and Matplotlib.</p>
+
+<p>Don’t forget also that by prepending a library, method or variable with <code class="highlighter-rouge">?</code>, you can access the Docstring for quick reference on syntax.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">?</span>str.replace<span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Docstring:
+S.replace(old, new[, count]) -&gt; str
+
+Return a copy of S with all occurrences of substring
+old replaced by new.  If the optional argument count is
+given, only the first count occurrences are replaced.
+Type:      method_descriptor
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div></div></div></div>
+
+<h2 id="4-plotting-in-notebooks">4. Plotting in notebooks</h2>
+
+<p>There are many options for generating plots in your notebooks.</p>
+<ul>
+  <li><a href="http://matplotlib.org/">matplotlib</a> (the de-facto standard), activated with <code class="highlighter-rouge">%matplotlib inline</code> - Here’s a Dataquest <a href="https://www.dataquest.io/blog/matplotlib-tutorial/">Matplotlib Tutorial</a>.</li>
+  <li><code class="highlighter-rouge">%matplotlib notebook</code> provides interactivity but can be a little slow, since rendering is done server-side.</li>
+  <li><a href="http://seaborn.pydata.org/">Seaborn</a> is built over 
+Matplotlib and makes building more attractive plots easier.  Just by 
+importing Seaborn, your matplotlib plots are made ‘prettier’ without any
+ code modification.</li>
+  <li><a href="https://github.com/mpld3/mpld3">mpld3</a> provides alternative renderer (using d3) for matplotlib code. Quite nice, though incomplete.</li>
+  <li><a href="http://bokeh.pydata.org/en/latest/">bokeh</a> is a better option for building interactive plots.</li>
+  <li><a href="https://plot.ly/">plot.ly</a> can generate nice plots - this used to be a paid service only but was recently open sourced.</li>
+  <li><a href="https://github.com/altair-viz/altair">Altair</a> is a 
+relatively new declarative visualization library for Python.  It’s easy 
+to use and makes great looking plots, however the ability to customize 
+those plots is not nearly as powerful as in Matplotlib.</li>
+</ul>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/bokeh.png">
+        <p><i>The Jupyter interface.</i></p>
+    </div>
+</div>
+
+<h2 id="5-ipython-magic-commands">5. IPython Magic Commands</h2>
+
+<p>The <code class="highlighter-rouge">%matplotlib inline</code> you saw above was an example of a <em>IPython Magic</em>
+ command. Being based on the IPython kernel, Jupyter has access to all 
+the Magics from the IPython kernel, and they can make your life a lot 
+easier!</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># This will list all magic commands</span>
+<span class="o">%</span><span class="k">lsmagic</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Available line magics:
+%alias  %alias_magic  %autocall  %automagic  %autosave  %bookmark  %cat  %cd  %clear  %colors  %config  %connect_info  %cp  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %lf  %lk  %ll  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %lx  %macro  %magic  %man  %matplotlib  %mkdir  %more  %mv  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %popd  %pprint  %precision  %profile  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %rm  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<p>I recommend browsing <a href="http://ipython.readthedocs.io/en/stable/interactive/magics.html">the documentation for all IPython Magic commands</a> as you’ll no doubt find some that work for you.  A few of my favorites are below:</p>
+
+<h3 id="6-ipython-magic---env-set-environment-variables">6. IPython Magic - %env: Set Environment Variables</h3>
+
+<p>You can manage environment variables of your notebook without 
+restarting the jupyter server process. Some libraries (like theano) use 
+environment variables to control behavior, %env is the most convenient 
+way.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Running %env without any arguments</span>
+<span class="c1"># lists all environment variables</span>
+
+<span class="c1"># The line below sets the environment</span>
+<span class="c1"># variable OMP_NUM_THREADS</span>
+<span class="o">%</span><span class="k">env</span> OMP_NUM_THREADS=4
+</pre></div>
+
+</div>
+</div>
+</div></div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>env: OMP_NUM_THREADS=4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div></div></div></div>
+
+<h3 id="7-ipython-magic---run--execute-python-code">7. IPython Magic - %run:  Execute python code</h3>
+
+<p><code class="highlighter-rouge">%run</code> can execute python code 
+from .py files - this is well-documented behavior. Lesser known is the 
+fact that it can also execute other jupyter notebooks, which can quite 
+useful.</p>
+
+<p>Note that using <code class="highlighter-rouge">%run</code> is not the same as importing a python module.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># this will execute and show the output from</span>
+<span class="c1"># all code cells of the specified notebook</span>
+<span class="o">%</span><span class="k">run</span> ./two-histograms.ipynb
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/two-hists.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h3 id="8-ipython-magic---load-insert-the-code-from-an-external-script">8. IPython Magic - %load: Insert the code from an external script</h3>
+
+<p>This will replace the contents of the cell with an external script.  
+You can either use a file on your computer as a source, or alternatively
+ a URL.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Before Running</span>
+<span class="o">%</span><span class="k">load</span> ./hello_world.py
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># After Running</span>
+<span class="c1"># %load ./hello_world.py</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>
+	<span class="nb">print</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hello World!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h3 id="9-ipython-magic---store-pass-variables-between-notebooks">9. IPython Magic - %store: Pass variables between notebooks.</h3>
+
+<p>The <code class="highlighter-rouge">%store</code> command lets you pass variables between two different notebooks.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="s1">'this is the string I want to pass to different notebook'</span>
+<span class="o">%</span><span class="k">store</span> data
+<span class="k">del</span> <span class="n">data</span> <span class="c1"># This has deleted the variable</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Stored 'data' (str)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<p>Now, in a new notebook…</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="o">%</span><span class="k">store</span> -r data
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>this is the string I want to pass to different notebook
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h3 id="10-ipython-magic---who-list-all-variables-of-global-scope">10. IPython Magic - %who: List all variables of global scope.</h3>
+
+<p>The <code class="highlighter-rouge">%who</code> command without any arguments will list all variables that existing in the global scope.  Passing a parameter like <code class="highlighter-rouge">str</code> will list only variables of that type.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">one</span> <span class="o">=</span> <span class="s2">"for the money"</span>
+<span class="n">two</span> <span class="o">=</span> <span class="s2">"for the show"</span>
+<span class="n">three</span> <span class="o">=</span> <span class="s2">"to get ready now go cat go"</span> 
+<span class="o">%</span><span class="k">who</span> str
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>one	 three	 two	 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+<h3 id="11-ipython-magic---timing">11. IPython Magic - Timing</h3>
+
+<p>There are two IPython Magic commands that are useful for timing - <code class="highlighter-rouge">%%time</code> and <code class="highlighter-rouge">%timeit</code>.  These are especially handy when you have some slow code and you’re trying to indentify where the issue is.</p>
+
+<p><code class="highlighter-rouge">%%time</code> will give you information about a single run of the code in your cell.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">time</span>
+import time
+for _ in range(1000):
+    time.sleep(0.01)# sleep for 0.01 seconds
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>CPU times: user 21.5 ms, sys: 14.8 ms, total: 36.3 ms
+Wall time: 11.6 s
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<p><code class="highlighter-rouge">%%timeit</code> uses the Python <a href="https://docs.python.org/3.5/library/timeit.html">timeit module</a> which runs a statement 100,000 times (by default) and then provides the mean of the fastest three times.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="o">%</span><span class="k">timeit</span> numpy.random.normal(size=100)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>The slowest run took 7.29 times longer than the fastest. This could mean that an intermediate result is being cached.
+100000 loops, best of 3: 5.5 µs per loop
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h3 id="12-ipython-magic---writefile-and-pycat-export-the-contents-of-a-cellshow-the-contents-of-an-external-script">12. IPython Magic - %%writefile and %pycat: Export the contents of a cell/Show the contents of an external script</h3>
+
+<p>Using the <code class="highlighter-rouge">%%writefile</code> magic saves the contents of that cell to an external file.  <code class="highlighter-rouge">%pycat</code> does the opposite, and shows you (in a popup) the syntax highlighted contents of an external file.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">writefile</span> pythoncode.py
+
+import numpy
+def append_if_not_exists(arr, x):
+    if x not in arr:
+        arr.append(x)
+        
+def some_useless_slow_function():
+    arr = list()
+    for i in range(10000):
+        x = numpy.random.randint(0, 10000)
+        append_if_not_exists(arr, x)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing pythoncode.py
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pycat</span> pythoncode.py
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text"><pre>
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span>
+<span class="k">def</span> <span class="nf">append_if_not_exists</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
+        <span class="n">arr</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">some_useless_slow_function</span><span class="p">():</span>
+    <span class="n">arr</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10000</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10000</span><span class="p">)</span>
+        <span class="n">append_if_not_exists</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span></code></pre></figure>
+
+</pre></div></div></div>
+</div></div></div></div>
+
+<h3 id="13-ipython-magic---prun-show-how-much-time-your-program-spent-in-each-function">13. IPython Magic - %prun: Show how much time your program spent in each function.</h3>
+
+<p>Using <code class="highlighter-rouge">%prun statement_name</code> 
+will give you an ordered table showing you the number of times each 
+internal function was called within the statement, the time each call 
+took as well as the cumulative time of all runs of the function.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">prun</span> some_useless_slow_function()
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+         26324 function calls in 0.556 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+    10000    0.527    0.000    0.528    0.000 &lt;ipython-input-46-b52343f1a2d5&gt;:2(append_if_not_exists)
+    10000    0.022    0.000    0.022    0.000 {method 'randint' of 'mtrand.RandomState' objects}
+        1    0.006    0.006    0.556    0.556 &lt;ipython-input-46-b52343f1a2d5&gt;:6(some_useless_slow_function)
+     6320    0.001    0.000    0.001    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.556    0.556 &lt;string&gt;:1(&lt;module&gt;)
+        1    0.000    0.000    0.556    0.556 {built-in method exec}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h3 id="14-ipython-magic---debugging-with-pdb">14. IPython Magic - Debugging with %pdb</h3>
+
+<p>Jupyter has own interface for <a href="https://docs.python.org/3.5/library/pdb.html">The Python Debugger (<code class="highlighter-rouge">pdb</code>)</a>. This makes it possible to go inside the function and investigate what happens there.</p>
+
+<p>You can view <a href="https://docs.python.org/3.5/library/pdb.html#debugger-commands">a list of accepted commands for <code class="highlighter-rouge">pdb</code> here</a>.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">pdb</span>
+
+<span class="k">def</span> <span class="nf">pick_and_take</span><span class="p">():</span>
+    <span class="n">picked</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+    
+<span class="n">pick_and_take</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Automatic pdb calling has been turned ON
+</pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_text output_error">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NotImplementedError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-24-0f6b26649b2e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     <span class="ansi-green-fg">raise</span> NotImplementedError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-fg">----&gt; 7</span><span class="ansi-red-fg"> </span>pick_and_take<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-24-0f6b26649b2e&gt;</span> in <span class="ansi-cyan-fg">pick_and_take</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">def</span> pick_and_take<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     picked <span class="ansi-blue-fg">=</span> numpy<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>randint<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">raise</span> NotImplementedError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> 
+<span class="ansi-green-intense-fg ansi-bold">      7</span> pick_and_take<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NotImplementedError</span>: </pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&gt; <span class="ansi-green-fg">&lt;ipython-input-24-0f6b26649b2e&gt;</span>(5)<span class="ansi-cyan-fg">pick_and_take</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-fg">      3 </span><span class="ansi-green-fg">def</span> pick_and_take<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">      4 </span><span class="ansi-red-fg">    </span>picked <span class="ansi-blue-fg">=</span> numpy<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>randint<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 5 </span><span class="ansi-red-fg">    </span><span class="ansi-green-fg">raise</span> NotImplementedError<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">      6 </span>
+<span class="ansi-green-fg">      7 </span>pick_and_take<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+</pre>
+</div>
+</div>
+<div class="output_area"><div class="prompt"></div><div class="box-flex1 output_subarea raw_input_container"><pre class="raw_input_prompt">ipdb&gt; <input class="raw_input" size="47" type="text"></pre></div></div>
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h3 id="15-ipython-magic---high-resolution-plot-outputs-for-retina-notebooks">15. IPython Magic - High-resolution plot outputs for Retina notebooks</h3>
+
+<p>One line of IPython magic will give you double resolution plot output for Retina screens, such as the more recent Macbooks. <em>Note: the example below won’t render on non-retina screens</em></p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="o">**</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/hires-1.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = 'retina'
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/hires-2.png" style="width:570px" class="full-img">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<div class="row" style="margin: 2em 0;">
+  <div class="col-md-12 signup-block">
+    <h3>Enjoying this post? Learn data science with Dataquest!</h3>
+    <h5>
+      <ul>
+        <li>Learn from the comfort of your browser.</li>
+        <li>Work with real-life data sets.</li> 
+        <li>Build a portfolio of projects.</li>
+      </ul>
+    </h5>
+    <a class="signup-button" href="https://www.dataquest.io/">Start for Free</a>
+  </div>
+</div>
+
+<h2 id="16-suppress-the-output-of-a-final-function">16. Suppress the output of a final function.</h2>
+
+<p>Sometimes it’s handy to suppress the output of the function on a 
+final line, for instance when plotting.  To do this, you just add a 
+semicolon at the end.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span><span class="o">**</span><span class="mf">1.5</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Here you get the output of the function</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([ 216.,  126.,  106.,   95.,   87.,   81.,   77.,   73.,   71.,   68.]),
+ array([ 0. ,  0.1,  0.2,  0.3,  0.4,  0.5,  0.6,  0.7,  0.8,  0.9,  1. ]),
+ &lt;a list of 10 Patch objects&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/hist.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># By adding a semicolon at the end, the output is suppressed.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/hist.png"> 
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</div></div></div></div>
+
+<h2 id="17-executing-shell-commands">17. Executing Shell Commands</h2>
+
+<p>It’s easy to execute a shell command from inside your notebook.  You 
+can use this to check what datasets are in available in your working 
+folder:</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>ls *.csv
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>nba_2016.csv             titanic.csv
+pixar_movies.csv         whitehouse_employees.csv
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</div></div></div></div>
+
+<p>Or to check and manage packages.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install numpy
+<span class="o">!</span>pip list <span class="p">|</span> grep pandas
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Requirement already satisfied (use --upgrade to upgrade): numpy in 
+/Library/Frameworks/Python.framework/Versions/3.4/lib/python3.4/site-packages
+pandas
+ (0.18.1)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div></div></div></div>
+
+<h2 id="18-using-latex-for-forumlas">18. Using LaTeX for forumlas</h2>
+
+<p>When you write <a href="https://www.latex-project.org/">LaTeX</a> in a Markdown cell, it will be rendered as a formula using MathJax.</p>
+
+<p>This:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$$ P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)} $$
+</code></pre>
+</div>
+
+<p>Becomes this:</p>
+
+<span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;&amp;#x2223;&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo&gt;&amp;#x2223;&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mspace width=&quot;thinmathspace&quot; /&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 15.237em; display: inline-block;"><span style="display: inline-block; position: relative; width: 11.892em; height: 0px; font-size: 128%;"><span style="position: absolute; clip: rect(0.765em, 1011.89em, 3.422em, -1000em); top: -2.344em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.109em;"></span></span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math; font-style: italic;">A</span><span class="mo" id="MathJax-Span-6" style="font-family: MathJax_Main; padding-left: 0.278em;">∣</span><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.278em;">B</span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-9" style="font-family: MathJax_Main; padding-left: 0.278em;">=</span><span class="mfrac" id="MathJax-Span-10" style="padding-left: 0.278em;"><span style="display: inline-block; position: relative; width: 6.438em; height: 0px; margin-right: 0.12em; margin-left: 0.12em;"><span style="position: absolute; clip: rect(3.113em, 1006.22em, 4.373em, -1000em); top: -4.692em; left: 50%; margin-left: -3.159em;"><span class="mrow" id="MathJax-Span-11"><span class="mi" id="MathJax-Span-12" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.109em;"></span></span><span class="mo" id="MathJax-Span-13" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-14" style="font-family: MathJax_Math; font-style: italic;">B</span><span class="mo" id="MathJax-Span-15" style="font-family: MathJax_Main; padding-left: 0.278em;">∣</span><span class="mi" id="MathJax-Span-16" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.278em;">A</span><span class="mo" id="MathJax-Span-17" style="font-family: MathJax_Main;">)</span><span class="mspace" id="MathJax-Span-18" style="height: 0em; vertical-align: 0em; width: 0.167em; display: inline-block; overflow: hidden;"></span><span class="mi" id="MathJax-Span-19" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.109em;"></span></span><span class="mo" id="MathJax-Span-20" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-21" style="font-family: MathJax_Math; font-style: italic;">A</span><span class="mo" id="MathJax-Span-22" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 3.993em;"></span></span><span style="position: absolute; clip: rect(3.113em, 1002.19em, 4.373em, -1000em); top: -3.295em; left: 50%; margin-left: -1.144em;"><span class="mrow" id="MathJax-Span-23"><span class="mi" id="MathJax-Span-24" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.109em;"></span></span><span class="mo" id="MathJax-Span-25" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-26" style="font-family: MathJax_Math; font-style: italic;">B</span><span class="mo" id="MathJax-Span-27" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 3.993em;"></span></span><span style="position: absolute; clip: rect(0.851em, 1006.44em, 1.172em, -1000em); top: -1.262em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.4px solid; width: 6.438em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.042em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.344em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.27em; border-left: 0px solid; width: 0px; height: 3.179em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo>∣</mo><mi>B</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo>∣</mo><mi>A</mi><mo stretchy="false">)</mo><mspace width="thinmathspace"></mspace><mi>P</mi><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow><mrow><mi>P</mi><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mfrac></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-1">P(A \mid B) = \frac{P(B \mid A) \, P(A)}{P(B)}</script>
+
+<p>Markdown is an important part of notebooks, so don’t forget to use its expressiveness!</p>
+
+<h2 id="19-run-code-from-a-different-kernel-in-a-notebook">19. Run code from a different kernel in a notebook</h2>
+
+<p>If you want to, you can combine code from multiple kernels into one notebook.</p>
+
+<p>Just use IPython Magics with the name of your kernel at the start of each cell that you want to use that Kernel for:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">%%bash</code></li>
+  <li><code class="highlighter-rouge">%%HTML</code></li>
+  <li><code class="highlighter-rouge">%%python2</code></li>
+  <li><code class="highlighter-rouge">%%python3</code></li>
+  <li><code class="highlighter-rouge">%%ruby</code></li>
+  <li><code class="highlighter-rouge">%%perl</code></li>
+</ul>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>%%bash
+<span class="k">for</span> i in <span class="o">{</span>1..5<span class="o">}</span>
+<span class="k">do</span>
+   <span class="nb">echo</span> <span class="s2">"i is </span><span class="nv">$i</span><span class="s2">"</span>
+<span class="k">done</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>i is 1
+i is 2
+i is 3
+i is 4
+i is 5
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<h2 id="20-install-other-kernels-for-jupyter">20. Install other kernels for Jupyter</h2>
+
+<p>One of the nice features about Jupyter is ability to run kernels for 
+different languages.  As an example, here is how to get and R kernel 
+running.</p>
+
+<h3 id="easy-option-installing-the-r-kernel-using-anaconda">Easy Option: Installing the R Kernel Using Anaconda</h3>
+
+<p>If you used Anaconda to set up your environment, getting R working is extremely easy.  Just run the below in your terminal:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>conda install -c r r-essentials
+
+</code></pre>
+</div>
+
+<h3 id="less-easy-option-installing-the-r-kernel-manually">Less Easy Option: Installing the R Kernel Manually</h3>
+
+<p>If you are not using Anaconda, the process is a little more complex.  Firstly, you’ll need to install R from <a href="https://cloud.r-project.org/">CRAN</a> if you haven’t already.</p>
+
+<p>Once that’s done, fire up an R console and run the following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>install.packages(c('repr', 'IRdisplay', 'crayon', 'pbdZMQ', 'devtools'))
+devtools::install_github('IRkernel/IRkernel')
+IRkernel::installspec()  # to register the kernel in the current R installation
+</code></pre>
+</div>
+
+<h2 id="21-running-r-and-python-in-the-same-notebook">21. Running R and Python in the same notebook.</h2>
+
+<p>The best solution to this is to install <a href="http://rpy2.bitbucket.org/">rpy2</a> (requires a working version of R as well), which can be easily done with <code class="highlighter-rouge">pip</code>:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pip install rpy2
+</code></pre>
+</div>
+
+<p>You can then use the two languages together, and even pass variables inbetween:</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> rpy2.ipython
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">R</span> require(ggplot2)
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_text">
+<pre></pre>
+</div>
+</div>
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([1], dtype=int32)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+        <span class="s1">'Letter'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'a'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">,</span> <span class="s1">'a'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'b'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">,</span> <span class="s1">'c'</span><span class="p">],</span>
+        <span class="s1">'X'</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span>
+        <span class="s1">'Y'</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">],</span>
+        <span class="s1">'Z'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+    <span class="p">})</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span>R <span class="o">-</span>i df
+ggplot<span class="p">(</span>data <span class="o">=</span> df<span class="p">)</span> <span class="o">+</span> geom_point<span class="p">(</span>aes<span class="p">(</span>x <span class="o">=</span> X<span class="p">,</span> y<span class="o">=</span> Y<span class="p">,</span> color <span class="o">=</span> Letter<span class="p">,</span> size <span class="o">=</span> Z<span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/ggplot.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<p><em>Example courtesy <a href="http://blog.revolutionanalytics.com/2016/01/pipelining-r-python.html">Revolutions Blog</a></em></p>
+
+<h2 id="22-writing-functions-in-other-languages">22. Writing functions in other languages</h2>
+
+<p>Sometimes the speed of numpy is not enough and I need to write some fast code. 
+In principle, you can compile function in the dynamic library and write python wrappers…</p>
+
+<p>But it is much better when this boring part is done for you, right?</p>
+
+<p>You can write functions in cython or fortran and use those directly from python code.</p>
+
+<p>First you’ll need to install:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>!pip install cython fortran-magic 
+</code></pre>
+</div>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> Cython
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="n">cython</span>
+<span class="k">def</span> <span class="nf">myltiply_by_2</span><span class="p">(</span><span class="nb">float</span> <span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">x</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">myltiply_by_2</span><span class="p">(</span><span class="mf">23.</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div></div>
+</div></div></div></div>
+
+<p>Personally I prefer to use fortran, which I found very convenient for
+ writing number-crunching functions. More details of usage can be found <a href="http://arogozhnikov.github.io/2015/11/29/using-fortran-from-python.html">here</a>.</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">load_ext</span> fortranmagic
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%</span><span class="k">fortran</span>
+subroutine compute_fortran(x, y, z)
+    real, intent(in) :: x(:), y(:)
+    real, intent(out) :: z(size(x, 1))
+
+    z = sin(x + y)
+
+end subroutine compute_fortran
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">compute_fortran</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div></div>
+
+</div></div></div></div>
+
+<p>There are also different jitter systems which can speed up your python code. More examples <a href="http://arogozhnikov.github.io/2015/09/08/SpeedBenchmarks.html">can be found here</a>.</p>
+
+<h2 id="23-multicursor-support">23. Multicursor support</h2>
+
+<p>Jupyter supports mutiple cursors, similar to Sublime Text. Simply click and drag your mouse while holding down <code class="highlighter-rouge">Alt</code>.</p>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <img class="gif" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/multiline.gif">
+        <img class="preview" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/multiline.png">
+        <p><i>Multicursor support.</i></p>
+    </div>
+</div>
+
+<h2 id="24-jupyter-contrib-extensions">24. Jupyter-contrib extensions</h2>
+
+<p><a href="https://github.com/ipython-contrib/jupyter_contrib_nbextensions">Jupyter-contrib extensions</a> is a family of extensions which give Jupyter a lot more functionality, including e.g. <code class="highlighter-rouge">jupyter spell-checker</code> and <code class="highlighter-rouge">code-formatter</code>.</p>
+
+<p>The following commands will install the extensions, as well as a menu
+ based configurator that will help you browse and enable the extensions 
+from the main Jupyter notebook screen.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>!pip install https://github.com/ipython-contrib/jupyter_contrib_nbextensions/tarball/master
+!pip install jupyter_nbextensions_configurator
+!jupyter contrib nbextension install --user
+!jupyter nbextensions_configurator enable --user
+</code></pre>
+</div>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/nbextensions.png" class="full-img">
+        <p><i>The nbextension configurator.</i></p>
+    </div>
+</div>
+
+<h2 id="25-create-a-presentation-from-a-jupyter-notebook">25. Create a presentation from a Jupyter notebook.</h2>
+
+<p>Damian Avila’s <a href="https://github.com/damianavila/RISE">RISE</a> allows you to create a powerpoint style presentation from an existing notebook.</p>
+
+<p>You can install RISE using conda:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>conda install -c damianavila82 rise
+</code></pre>
+</div>
+
+<p>Or alternatively pip:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>pip install RISE
+</code></pre>
+</div>
+
+<p>And then run the following code to install and enable the extension:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>jupyter-nbextension install rise --py --sys-prefix
+jupyter-nbextension enable rise --py --sys-prefix
+</code></pre>
+</div>
+
+<h2 id="26-the-jupyter-output-system">26. The Jupyter output system</h2>
+
+<p>Notebooks are displayed as HTML and the cell output can be HTML, so you can return virtually anything: video/audio/images.</p>
+
+<p>In this example I scan the folder with images in my repository and show thumbnails of the first 5:</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Image</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s1">'../images/ml_demonstrations/'</span><span class="p">)</span> <span class="k">if</span> <span class="n">f</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">'.png'</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">[:</span><span class="mi">5</span><span class="p">]:</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="p">(</span><span class="s1">'../images/ml_demonstrations/'</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/img1.png" width="100">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/img2.png" width="100">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/img3.png" width="100">
+</div>
+ 
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/img4.png" width="100">
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/img5.png" width="100">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+</div></div></div></div>
+
+<p>We can create the same list with a bash command, because magics and bash calls return python variables:</p>
+
+<div class="row jupyter"><div class="col-md-12"><div tabindex="-1" id="notebook" class="border-box-sizing"><div class="container" id="notebook-container">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">names</span> <span class="o">=</span> <span class="o">!</span>ls ../images/ml_demonstrations/*.png
+<span class="n">names</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['../images/ml_demonstrations/colah_embeddings.png',
+ '../images/ml_demonstrations/convnetjs.png',
+ '../images/ml_demonstrations/decision_tree.png',
+ '../images/ml_demonstrations/decision_tree_in_course.png',
+ '../images/ml_demonstrations/dream_mnist.png']</pre>
+</div>
+
+</div>
+
+</div>
+</div></div>
+</div></div></div></div>
+
+<h2 id="27-big-data-analysis">27. ‘Big data’ analysis</h2>
+
+<p>A number of solutions are available for querying/processing large data samples:</p>
+<ul>
+  <li><a href="https://github.com/ipython/ipyparallel">ipyparallel (formerly ipython cluster)</a> is a good option for simple map-reduce operations in python. We use it in <a href="https://github.com/yandex/rep">rep</a> to train many machine learning models in parallel</li>
+  <li><a href="http://www.cloudera.com/documentation/enterprise/5-5-x/topics/spark_ipython.html">pyspark</a></li>
+  <li>spark-sql magic <a href="https://github.com/jupyter-incubator/sparkmagic">%%sql</a></li>
+</ul>
+
+<h2 id="28-sharing-notebooks">28. Sharing notebooks</h2>
+
+<p>The easiest way to share your notebook is simply using the  notebook 
+file (.ipynb), but for those who don’t use Jupyter, you have a few 
+options:</p>
+
+<ul>
+  <li>Convert notebooks to html file using the <code class="highlighter-rouge">File &gt; Download as &gt; HTML</code> Menu option.</li>
+  <li>Share your notebook file with <a href="https://gist.github.com/">gists</a> or on github, both of which render the notebooks. See <a href="https://github.com/dataquestio/solutions/blob/master/Mission202Solution.ipynb">this example</a>.
+    <ul>
+      <li>If you upload your notebook to a github repository, you can use the handy <a href="http://mybinder.org/">mybinder</a> service to allow someone half an hour of interactive Jupyter access to your repository.</li>
+    </ul>
+  </li>
+  <li>Setup your own system with <a href="https://github.com/jupyterhub/jupyterhub">jupyterhub</a>, this is very handy when you organize mini-course or workshop and don’t have time to care about students machines.</li>
+  <li>Store your notebook e.g. in dropbox and put the link to <a href="http://nbviewer.jupyter.org/">nbviewer</a>.  nbviewer will render the notebook from whichever source you host it.</li>
+  <li>Use the <code class="highlighter-rouge">File &gt; Download as &gt; PDF</code> menu to save your notebook as a PDF.  If you’re going this route, I highly recommend reading Julius Schulz’s excellent article <a href="http://blog.juliusschulz.de/blog/ultimate-ipython-notebook">Making publication ready Python notebooks</a>.</li>
+  <li><a href="https://www.dataquest.io/blog/how-to-setup-a-data-science-blog/">Create a blog using Pelican from your Jupyter notebooks</a>.</li>
+</ul>
+
+<h2 id="what-are-your-favorites">What are your favorites?</h2>
+
+<p>Let me know in the comments what your favorite Jupyter notebook tips are.</p>
+
+<p>At <a href="https://www.dataquest.io/">Dataquest</a>, our interactive
+ guided projects use Jupyter notebooks to building data science projects
+ and get a job in data.  If you’re interested, you can <a href="https://www.dataquest.io/">signup and do our first module for free</a>.</p>
+
+<p>I also recommend the links below for further reading:</p>
+
+<ul>
+  <li>IPython <a href="https://ipython.org/ipython-doc/3/interactive/magics.html">built-in magics</a></li>
+  <li>Nice <a href="http://quasiben.github.io/dfwmeetup_2014/#/">interactive presentation about jupyter</a> by Ben Zaitlen</li>
+  <li>Advanced notebooks <a href="https://blog.dominodatalab.com/lesser-known-ways-of-using-notebooks/">part 1: magics</a> 
+and <a href="https://blog.dominodatalab.com/interactive-dashboards-in-jupyter/">part 2: widgets</a></li>
+  <li><a href="http://pynash.org/2013/03/06/timing-and-profiling/">Profiling in python with jupyter</a></li>
+  <li><a href="http://mindtrove.info/4-ways-to-extend-jupyter-notebook/">4 ways to extend notebooks</a></li>
+  <li><a href="https://www.quora.com/What-are-your-favorite-tricks-for-IPython-Notebook">IPython notebook tricks</a></li>
+  <li><a href="https://www.linkedin.com/pulse/comprehensive-comparison-jupyter-vs-zeppelin-hoc-q-phan-mba-">Jupyter vs Zeppelin for big data</a></li>
+  <li><a href="http://blog.juliusschulz.de/blog/ultimate-ipython-notebook">Making publication ready Python notebooks</a>.</li>
+</ul>
+
+        </section>
+
+        <section class="share-bar" id="email-signup">
+            <div class="share-page">
+                <div class="bottom-signup-text">
+                <strong>Join 40,000+ Data Scientists</strong>: Get Data Science Tips, Tricks and Tutorials, Delivered Weekly.
+                </div>
+                <!-- Begin MailChimp Signup Form -->
+                <div class="mailchimp-form">
+                <form action="//dataquest.us11.list-manage.com/subscribe/post?u=cc077c9f74950452d59292c41&amp;id=9436fa3dc8" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+                <div>
+	           <input name="EMAIL" placeholder=" Enter your email address" required="" type="email">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input name="b_cc077c9f74950452d59292c41_9436fa3dc8" tabindex="-1" type="text"></div>
+                <input value="Sign me up!" onclick="ga('send', 'event', { eventCategory: 'All', eventAction: 'blog-email-signup'});" name="subscribe" type="submit">
+                </div>
+                </form>
+                </div>
+                <!--End mc_embed_signup-->
+            </div>
+        </section>
+
+        
+
+        <footer class="post-footer">
+            <!-- If we want to display author's name and bio -->
+            
+                
+                <figure class="author-image">
+                    <a class="img" href="https://www.dataquest.io/blog/" style="background-image: url(/blog/images/authors/josh_profile.png)">
+                    <span class="hidden">Josh's Picture</span></a>
+                </figure>
+                <section class="author">
+                        <!-- Author Name -->
+                        <h4> Josh Devlin </h4>
+                        <!-- Author Bio -->
+                        <p>
+                            Marketing Lead at <a href="https://www.dataquest.io/">Dataquest.io</a> (Learn Data Science in your Browser).<br>Loves Data and Aussie Rules Football. Australian living in Texas.<br>Get in touch <a href="http://twitter.com/jaypeedevlin">@jaypeedevlin</a>.
+                        </p>
+                </section>                
+            
+
+            <!-- Share links section -->
+            <section class="share">
+    <h4>Share this post</h4>
+    <a class="icon-twitter" href="http://twitter.com/share?text=28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts&amp;url=https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+        <span class="hidden">Twitter</span>
+    </a>
+    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+        <span class="hidden">Facebook</span>
+    </a>
+    <a class="icon-google-plus" href="https://plus.google.com/share?url=https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+        <span class="hidden">Google+</span>
+    </a>
+</section>
+            
+            <!-- Disqus comments -->
+            
+                <section class="disqus">
+    <div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" scrolling="no" tabindex="0" title="Disqus" style="width: 1px !important; min-width: 100% !important; border: medium none !important; overflow: hidden !important; height: 2653px !important;" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/a.htm" horizontalscrolling="no" verticalscrolling="no" frameborder="0" width="100%"></iframe></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = 'https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/'
+            this.page.identifier = 'BA36A880-5AB6-4FD2-A7BA-518BFFD05E97'
+            // var disqus_developer = 1;  Comment out when the site is live
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//dq-blog.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</section>
+            
+            
+            <div class="row" style="margin: 2em 0;">
+  <div class="col-md-12 signup-block">
+    <h3>Enjoying this post? Learn data science with Dataquest!</h3>
+    <h5>
+      <ul>
+        <li>Learn from the comfort of your browser.</li>
+        <li>Work with real-life data sets.</li> 
+        <li>Build a portfolio of projects.</li>
+      </ul>
+    </h5>
+    <a class="signup-button" href="https://www.dataquest.io/">Start for Free</a>
+  </div>
+</div>
+            
+        </footer>
+
+    </article>
+
+</main>
+
+    <footer class="site-footer clearfix">
+      <section class="copyright">
+        <a href="https://www.dataquest.io/blog/">Data Science Blog: Dataquest</a> © 
+              2017 • All rights reserved.
+      </section>
+    </footer>
+
+    <script>window.markdeepOptions = {mode: 'script'};</script>
+    
+    <script type="text/javascript" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/jquery-1.js"></script>
+    <script type="text/javascript" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/jquery.js"></script>
+    <script type="text/javascript" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/markdeep.js"></script>
+    <script type="text/javascript" src="28%20Jupyter%20Notebook%20tips,%20tricks%20and%20shortcuts-Dateien/index.js"></script>
+    
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      !function(){var 
+analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment
+ snippet included 
+twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return
+ function(){var 
+e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return
+ analytics}};for(var t=0;t<analytics.methods.length;t++){var 
+e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var
+ 
+e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var
+ 
+n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+
+      analytics.load("AshBDDdcjA4D5pxKTMHzKN0dCzbjfTc3");
+      analytics.page()
+      }}();
+    </script>
+<!-- End Google Analytics -->
+    <script>
+        var diagrams = $("diagram");
+        diagrams.each(function(){
+            var element = $(this);
+            var html = element.html();
+            html = html.replace(/&amp;/g, '&');
+            html = html.replace(/&gt;/g, '>');
+            html = html.replace(/&lt;/g, '<');
+            html = html.replace(/\$\$/g, '');
+            var diagram = window.markdeep.formatDiagram(html);
+            element.html("");
+            element.append(diagram);
+        });
+    </script>
+
+
+<iframe style="display: none;"></iframe><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px none; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px none; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-size-adjust: none; font-family: MathJax_Main,sans-serif;"></div></div></body></html>

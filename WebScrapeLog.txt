@@ -1,0 +1,59 @@
+cmd: pip3 install BeautifulSoup4
+# installieren von Webscraper Library BeautifulSoup
+
+# Erstes beutiful soup programm das funktioniert
+import urllib3
+from bs4 import BeautifulSoup
+
+url = "http://www.wetter.at"
+http = urllib3.PoolManager()
+response = http.request('get',url)
+soup = BeautifulSoup(response.data)
+print(soup)
+
+# Öffnen einer lokalen *.htm Datei
+
+site = open("GailTverberg.htm","r")
+soup = 	BeautifulSoup(site,"html5lib")
+
+# Ein String mit html Code als Versuchsobjekt
+html_doc = """
+<html><head><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse's story</b></p>
+
+<p class="story">Once upon a time there were three little sisters; and their names were
+<a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>,
+<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
+<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
+and they lived at the bottom of a well.</p>
+
+<p class="story">...</p>
+"""
+#Wiederum mit BeautifulSoup öffnen
+soup = BeautifulSoup(html_doc, 'html.parser')
+print(soup.prettify())
+# verschiedene Variablen die extrahiert werden können
+soup.title
+soup.title.name
+soup.title.string
+soup.title.parent.name
+soup.p
+soup.p['class']
+soup.a
+soup.find_all('a')
+soup.find(id="link3")
+
+# Erstes Beispiel wie man eine Website als String ausliest
+from urllib.request import urlopen 
+
+WebsiteString = urlopen("http://wetter.at")
+print(WebsiteString.read())
+
+# 
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+WebsiteString = urlopen("http://wetter.at")
+soup = (WebsiteString.read())
+print(soup)

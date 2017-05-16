@@ -1,0 +1,19 @@
+Jonathan Whitmore Daten:
+https://github.com/jbwhit/OSCON-2015/tree/master/deliver
+
+Name:
+[ISO-8601-Datum[AmiDatum]] - Initialien des Menschen[ich] - [2-4 Wörter Beschreibung].ipynb
+
+Ordnerstruktur:
+data - outside of version control!
+deliver - final polished notebooks!
+develop - lab notebooks!
+figures - irgendwas mit Zahlen
+src - zB python-scripts, alle arten von code & module
+
+best practice github:
+jeder DataScientist hat seinen Dev Ordner
+
+commited werden:
+.ipynb, .py, .html, "figures"
+
