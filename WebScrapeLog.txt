@@ -57,3 +57,596 @@ from bs4 import BeautifulSoup
 WebsiteString = urlopen("http://wetter.at")
 soup = (WebsiteString.read())
 print(soup)
+
+Problem mit scrapy:
+http://www.microsoft.com/en-us/download/details.aspx?id=44266
+-> windows c++ compiler für python 2.7
+
+Geht scrapy nur mit py 2.7?
+
+Die 4 Arten der HTTP Server Requests:
+GET
+POST
+PUT
+DELETE
+
+http://freegeoip.net/json/195.34.133.21
+-> Kann man jegliche IP eingeben und Daten nachschauen
+
+"GET" -> Anfrage an Server für das Zurückgeben von Info zB eine Website.
+"POST" -> Information wird an Server geschickt zB um Formular auszufüllen
+"PUT" -> va um Objekte und Informationen auf den aktuellen Stand zu bringen dh ein Update
+"DELETE" -> Objekt vernichten
+
+Unterschied API-website: unterschiedliches Format der Infos
+
+Viele APIs verlangen "Authentication" zB weil man was zahlen muss!
+"token" -> Marke der Authentifizierung des Users
+geringere Sicherheitsstufe: fixiert an den Aufrufen des Users
+höhere Sicherheitsstufe: jedes mal wenn User sich registriert ihm übergeben um sich damit zu authentifizieren
+
+token = "<your api key>"
+webRequest = urllib.request.Request("http://myapi.com", headers={"token":token})
+html = urlopen(webRequest)
+
+-> Programm öffnet Website und übergibt token dh Key der Authtntifizierung!
+
+Responses in JSON und XML
+
+1. JSON kleiner als XML
+
+Shift in Webtechnologies:
+receiving end einer API:
+zuvor PHP und .NET
+jetzt Frameworks so wie Angular und Backbone
+
+Webscraping:
+GET request: 1. URL Pfad: gibt Struktur/Pfad vor wie man tiefer und tiefer in der Datensuche gehen will
+2. query -> Filter für die Suche
+BSP http://socialmediasite.com/users/1234/posts?from=08012014&to=08312014
+User 1234 alle Posts von 1. August 2014
+Dasseleb mit API 0.4 in JSON:
+http://socialmediasite.com/api/v4/json/users/1234/posts?from=08012014&to=08312014
+
+JSON kann auch ein request Parameter sein:
+http://socialmediasite.com/users/1234/posts?format=json&from=08012014&to=08312014
+
+Musiker suchen API:
+http://developer.echonest.com/api/v4/artist/search?api_key=<your api
+key>&name=monty%20python
+-> result
+{"response": {"status": {"version": "4.2", "code": 0, "message": "Suc
+cess"}, "artists": [{"id": "AR5HF791187B9ABAF4", "name": "Monty Pytho
+n"}, {"id": "ARWCIDE13925F19A33", "name": "Monty Python's SPAMALOT"},
+{"id": "ARVPRCC12FE0862033", "name": "Monty Python's Graham Chapman"
+}]}}
+
+Sucht eine Liste von Songs:
+http://developer.echonest.com/api/v4/artist/songs?api_key=<your api key>&id=
+AR5HF791187B9ABAF4&format=json&start=0&results=10
+
+resultat-> {"response": {"status": {"version": "4.2", "code": 0, "message": "Success"},
+"start": 0, "total": 476, "songs": [{"id": "SORDAUE12AF72AC547", "title":
+"Neville Shunt"}, {"id": "SORBMPW13129A9174D", "title": "Classic (Silbury Hill)(Part 2)"}, {"id": "SOQXAYQ1316771628E", "title": "Famous Person Quiz (The
+Final Rip Off Remix)"}, {"id": "SOUMAYZ133EB4E17E8", "title": "Always Look On
+The Bright Side Of Life - Monty Python"}, ...]}}
+
+Twitter API....keys und wie man das macht....
+-> braucht einen Twitter Account, muss sich auf der Dev-Site registrieren, dann kriegt man die Keys
+fürs Python-Scraping
+Twitter Libraries für Py3 können runtergeladen und installiert werden
+
+Form um von Twitter Info(über eigene Tweets) einzuholen:
+from twitter import Twitter
+t = Twitter(auth=OAuth(<Access Token>,<Access Token Secret>,
+<Consumer Key>,<Consumer Secret>))
+pythonTweets = t.search.tweets(q = "#python")
+print(pythonTweets)
+
+-> gibt ein langes JSON Script zurück mit vielen vielen Infos eg Name des Tweets, Datum, Inhalt, Follower etc
+
+pythonStatuses = t.statuses.user_timeline(screen_name="montypython", count=5)
+print(pythonStatuses)
+
+-> Hier werden mit count=5 nur die LETZTEN 5 Tweets des Users abgefragt, damit der Datenwust nicht erdrückend wird.
+
+GOOGLE APIs
+
+Google Products Page -> ~repository mit allen Google APIs und Devkits
+Google API console -> kann bequem APIs aktivieren und deaktivieren
+
+Google credentials page: hier können API-keys erstellt werden, entweder für eine spezifische IP/Url oder allgemeiner
+
+Sehr relevant: google map APIs. Möglichkeiten sind: höhen/breitengrade geographische Bezüge, Straßenkoordinaten so ziemlich
+alle Geoinformationen einholen
+
+Beispiel: Googles GEOCode API-> GET-request um höhen/breitengrad einer Adresse zu erfahren
+Abfrage:
+https://maps.googleapis.com/maps/api/geocode/json?address=1+Science+Park+Boston
++MA+02114&key=<your API key>
+"results" : [ { "address_components" : [ { "long_name" : "Museum Of Science Drive
+way", "short_name" : "Museum Of Science Driveway", "types" : [ "route" ] }, { "l
+ong_name" : "Boston", "short_name" : "Boston", "types" : [ "locality", "politica
+l" ] }, { "long_name" : "Massachusetts", "short_name" : "MA", "types" : [ "admin
+istrative_area_level_1", "political" ] }, { "long_name" : "United States", "shor
+t_name" : "US", "types" : [ "country", "political" ] }, { "long_name" : "0211
+4", "short_name" : "02114", "types" : [ "postal_code" ] } ], "formatted_address"
+: "Museum Of Science Driveway, Boston, MA 02114, USA", "geometry" : { "bounds" :
+{ "northeast" : { "lat" : 42.368454, "lng" : -71.06961339999999 }, "southwest" :
+{ "lat" : 42.3672568, "lng" : -71.0719624 } }, "location" : { "lat" : 42.3677994
+, "lng" : -71.0708078 }, "location_type" : "GEOMETRIC_CENTER", "viewport" : { "n
+ortheast" : { "lat" : 42.3692043802915, "lng" : -71.06943891970849 }, "southwest
+" : { "lat" : 42.3665064197085, "lng" : -71.0721368802915 } } }, "types" : [ "ro
+ute" ] } ], "status" : "OK" }
+
+JSON Query um Zeitzone des angegebenen längen&breitengrades zu finden: 
+https://maps.googleapis.com/maps/api/timezone/json?location=42.3677994,-71.0708
+078&timestamp=1412649030&key=<your API key>
+response:
+{ "dstOffset" : 3600, "rawOffset" : -18000, "status" : "OK", "timeZon
+eId" : "America/New_York", "timeZoneName" : "Eastern Daylight Time" }
+
+Abfrage um eine Seehöhe zu bekommen
+https://maps.googleapis.com/maps/api/elevation/json?locations=42.3677994,-71.070
+8078&key=<your API key>
+Ergebnis:
+{ "results" : [ { "elevation" : 5.127755641937256, "location" : { "la
+t" : 42.3677994, "lng" : -71.0708078 }, "resolution" : 9.543951988220
+215 } ], "status" : "OK" }
+-> Hinweis: "resolution" = der Abstand zum nächsten Interpolationspunkt
+
+JSON parsen:
+
+einfaches Skript:
+
+import json
+from urllib.request import urlopen
+def getCountry(ipAddress):
+	response = urlopen("http://freegeoip.net/json/"+ipAddress).read().decode('utf-8')
+	responseJson = json.loads(response)
+	return responseJson.get("country_code")
+print(getCountry("50.78.253.58"))
+
+-> read() mit decode() ließt den JSON Code als normalen Text aus, loads() parst ihn auf JSON, get() nimmt aus dem dict den Wert
+eines Attributes(? dicts haben attribute...?)
+
+Beispiel wie ein JSON String eingelesen und ausgegeben wird:
+import json
+jsonString = '{"arrayOfNums":[{"number":0},{"number":1},{"number":2}],
+"arrayOfFruits":[{"fruit":"apple"},{"fruit":"banana"},
+{"fruit":"pear"}]}'
+jsonObj = json.loads(jsonString)
+print(jsonObj.get("arrayOfNums"))								#1.
+print(jsonObj.get("arrayOfNums")[1])								#2
+print(jsonObj.get("arrayOfNums")[1].get("number")+jsonObj.get("arrayOfNums")[2].get("number"))  #3
+print(jsonObj.get("arrayOfFruits")[2].get("fruit"))						#4
+
+->
+1. [{'number': 0}, {'number': 1}, {'number': 2}]
+2. {'number': 1}
+3. 3
+4. pear
+
+Der JSON Code wird als List (so wie Array) eingelesen, die einzelnen Objekte Name:Value werden als dicts eingelesen (bietet sich an), welche in der Liste
+enthalten sind, dh Liste von dicts
+Bei Nr. 3 werden die Werte der Objekte ausgelesen und addiert.
+
+Crawler auf Wikipedia: auslesen der IPs auf den edit history Seiten:
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import datetime
+import random
+import re
+random.seed(datetime.datetime.now())
+def getLinks(articleUrl):
+	html = urlopen("http://en.wikipedia.org"+articleUrl)
+	bsObj = BeautifulSoup(html)
+	return bsObj.find("div", {"id":"bodyContent"}).findAll("a",href=re.compile("^(/wiki/)((?!:).)*$"))
+
+def getHistoryIPs(pageUrl):
+	#Format of revision history pages is:
+	#http://en.wikipedia.org/w/index.php?title=Title_in_URL&action=history
+	pageUrl = pageUrl.replace("/wiki/", "")
+	historyUrl = "http://en.wikipedia.org/w/index.php?title="+pageUrl+"&action=history"
+	print("history url is: "+historyUrl)
+	html = urlopen(historyUrl)
+	bsObj = BeautifulSoup(html)
+	#finds only the links with class "mw-anonuserlink" which has IP addresses
+	#instead of usernames
+	ipAddresses = bsObj.findAll("a", {"class":"mw-anonuserlink"})
+	addressList = set()
+	for ipAddress in ipAddresses:
+		addressList.add(ipAddress.get_text())
+		return addressList
+	links = getLinks("/wiki/Python_(programming_language)")
+	while(len(links) > 0):
+		for link in links:
+			print("-------------------")
+			historyIPs = getHistoryIPs(link.attrs["href"])
+			for historyIP in historyIPs:
+				print(historyIP)
+	newLink = links[random.randint(0, len(links)-1)].attrs["href"]
+	links = getLinks(newLink)
+
+-> getLinks findet alle Artikellinks einer Seite die der Funktion übergeben wird
+-> getHistoryIPs nimmt eine Wikipedia Adresse, übergibt deren edit page an BeautifulSoup
+	-> filtert alle IPs heraus
+	-> speichert den beinhalteten Text von ipAdresses(=Liste?) in adressList ab (ist ein set())
+	-> holt alle Artikellinks von der angegebenen(her vorgegebenen) Seite mit getLinks()
+	-> iteriert durch die Artikellinks
+	-> ruft sich selbst rekursiv auf (solange len(links)>0), filtert wiederum alle IPs heraus (wie am Anfang)
+		-> speichert dieIps als Text in adressList ab
+		-> holt alle Links von der angegebenen Seite
+		-> iteriert durch Artikellinks
+	....neuer Randomlink aus den Artikellinks, alles nochmal von vorne
+
+-> Hinweis zu Python sets: ungeordnet, aber Vorteil: nehmen jedes Element nur ein einziges Mal auf!
+
+Dieser Code hat eine Sicherheitsvorkehrung bei schlechten IPs:
+
+def getCountry(ipAddress):
+	try:
+		response = urlopen("http://freegeoip.net/json/"+ipAddress).read().decode('utf-8')
+	except HTTPError:
+		return None
+	responseJson = json.loads(response)
+	return responseJson.get("country_code")
+	links = getLinks("/wiki/Python_(programming_language)")
+
+while(len(links) > 0):
+	for link in links:
+		print("-------------------")
+		historyIPs = getHistoryIPs(link.attrs["href"])
+			for historyIP in historyIPs:
+				country = getCountry(historyIP)
+					if country is not None:
+						print(historyIP+" is from "+country)
+newLink = links[random.randint(0, len(links)-1)].attrs["href"]
+links = getLinks(newLink)
+
+-> getCountry gibt None zurück wenn die Website "http://freegeoip.net/json/"+ipAddress"
+	die IP nicht findet und deshalb urlopen(...) einen Fehler meldet (404 not found)
+
+DATEN SPEICHERN
+wichtige Technologien um Webscraping Daten zu speichern
+
+Empfehlungen: Datenbanken für APIs
+		FileStream um Dokumente aus dem Internet auf Festplatte zu speichern
+
+Empfehlung beim Scrapen: Dateien nur als URL-Referenzen speichern, um den Scraper nicht zu belasten während er sucht
+	-> kann man im Nachhinein feststellen ob man die Daten überhaupt will
+	-> keine Serverrenitenz
+NACHTEILE:
+	-> URL-Referenzen auf der eigenen Website = "HOTLINKING" -> sehr unbeliebt beim Internet!
+	-> Dependenz....
+	-> URL Gültigkeit kann sich ändern
+	-> das downloaden von Content kann den Scraper als Browser bzw normalen User erscheinen lassen
+
+Runterladen eines Bildes per Remote mit BeautifulSoup:
+
+from urllib.request import urlretrieve
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen("http://www.pythonscraping.com")
+bsObj = BeautifulSoup(html)
+imageLocation = bsObj.find("a", {"id": "logo"}).find("img")["src"]
+urlretrieve (imageLocation, "logo.jpg")
+
+import os
+from urllib.request import urlretrieve
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+
+downloadDirectory = "downloaded"
+baseUrl = "http://pythonscraping.com"
+def getAbsoluteURL(baseUrl, source):
+	if source.startswith("http://www."):
+		url = "http://"+source[11:]
+	elif source.startswith("http://"):
+		url = source
+	elif source.startswith("www."):
+		url = source[4:]
+		url = "http://"+source
+	else:
+		url = baseUrl+"/"+source
+	if baseUrl not in url:
+		return None
+		return url
+
+def getDownloadPath(baseUrl, absoluteUrl, downloadDirectory):
+	path = absoluteUrl.replace("www.", "")
+	path = path.replace(baseUrl, "")
+	path = downloadDirectory+path
+	directory = os.path.dirname(path)
+	if not os.path.exists(directory):
+		os.makedirs(directory)
+		return path
+
+html = urlopen("http://www.pythonscraping.com")
+bsObj = BeautifulSoup(html)
+downloadList = bsObj.findAll(src=True)
+for download in downloadList:
+	fileUrl = getAbsoluteURL(baseUrl, download["src"])
+	if fileUrl is not None:
+		print(fileUrl)
+urlretrieve(fileUrl, getDownloadPath(baseUrl, fileUrl, downloadDirectory))
+
+-> def getAbsoluteURL formatiert nur den Link
+-> def getDownloadPath() erstellt automatisch einen Downloadpfad im System der sich namentlich auf die Domain bezieht von der der Content kommt
+-> danach wird ein BeautifulSoup-Objekt mit der URL erstellt,
+-> downloadList nimmt über BS alle Objekte die mit "src" als Attribut markiert sind
+-> durch alle Objekte mit "src" als Attribut wird iteriert, URL formatiert, ausgedruckt wenn sie existiert
+-> mit urlretrieve wird der Inhalt der URL runtergeladen
+
+ACHTUNG: zufälliges Runterladen von Content ist sehr gefährlich!
+
+CSV Files bearbeiten:
+
+import csv
+csvFile = open("../files/test.csv", 'w+')
+try:
+	writer = csv.writer(csvFile)
+	writer.writerow(('number', 'number plus 2', 'number times 2'))
+	for i in range(10):
+		writer.writerow( (i, i+2, i*2))
+finally:
+	csvFile.close()
+
+-> erstellt ein csv File mit dem Header ('number', 'number plus 2', 'number times 2')
+-> und einer Zahlenmatric als Daten darunter ...
+
+
+Folgendes Programm ließt eine sehr aufwändig formatierte Tabelle aus Wikipedia aus und
+bildet sie in einer .csv Datei ab, als reiner Text mit der .get_Text() Funktion:
+
+import csv
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen("http://en.wikipedia.org/wiki/Comparison_of_text_editors")
+
+bsObj = BeautifulSoup(html)
+
+#The main comparison table is currently the first table on the page
+table = bsObj.findAll("table",{"class":"wikitable"})[0]
+rows = table.findAll("tr")
+csvFile = open("../files/editors.csv", 'wt')
+writer = csv.writer(csvFile)
+try:
+	for row in rows:
+		csvRow = []
+	for cell in row.findAll(['td', 'th']):
+		csvRow.append(cell.get_text())
+		writer.writerow(csvRow)
+finally:
+	csvFile.close()
+
+
+MYSQL
+
+SELECT * FROM users WHERE name="rayn"
+
+Homebrew -> brew install Mysql eine Möglichkeit um MySQL zu holen
+Oder eben XAMPP
+MySQL ist CASE INsenSITive!
+
+create database [name]
+use [selber name]
+create table [tabellenname] -> ERROR!
+-> CREATE TABLE pages (id BIGINT(7) NOT NULL AUTO_INCREMENT, title VARCHAR(200),
+content VARCHAR(10000), created TIMESTAMP DEFAULT CURRENT_TIMESTAMP, PRIMARY KEY
+(id));
+....denn eine Tabelle kann nicht ohne Reihen existieren
+-> Name, Datentyp, optionale Modifer
+Spalten (id, title, content, created) wurden hier erstellt
+
+
+Describe [name d Tabelle]
+
+INSERT INTO pages (title, content) VALUES ("Test page title", "This is some test page content. It can be up to 10,000 characters long.");
+
+INSERT INTO pages (id, title, content, created) VALUES (3, "Test page title", "
+This is some test page content. It can be up to 10,000 characters long.", "2014-
+09-21 10:25:32");
+-> wenn id-> AUTO_INCREMENT, dann darf es die eingegebene integer id noch nicht geben!
+-> ist aber bad practice
+
+SELECT * FROM pages WHERE id = 2;
+
+SELECT * FROM pages WHERE title LIKE "%test%";
+-> alle Zeilen die ein Wort das "test" enthält enthalten
+
+SELECT id, title FROM pages WHERE content LIKE "%page content%";
+-> best Spalten spezifiziert
+
+DELETE FROM pages WHERE id = 1;
+
+UPDATE pages SET title="A new title", content="Some new content" WHERE id=2;
+
+MYSQL und Python
+
+-> PyMySQL ist eine Open Source Library die das packt
+
+[heruntergeladene python library installieren: in der directory von der library: python setup.py install]
+
+Mit diesem Python code kann man mithilfe von PyMySQL mit MySQL interagieren:
+
+import pymysql
+conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock',
+user='root', passwd=None, db='mysql')
+cur = conn.cursor()
+cur.execute("USE scraping")
+cur.execute("SELECT * FROM pages WHERE id=1")
+print(cur.fetchone())
+cur.close()
+conn.close()
+
+-> Zwei relevante Objekte: connection Objekt und corsor Objekt
+-> cursor: enthält statusinformationen zur db, info welche db verwendet wird, letzte abfrage der db etc.
+	-> relevant für das Handling von mehreren dbs
+
+WICHTIG: connections und cursor nach verwendung immer beenden 
+
+Der Wikipedia Scraper wird verwendet um MySQL als Datenbank anzuwenden
+Wichtig dabei: Zeichensätze MySQL ist nicht gut mit Unicode(anscheinend):
+
+ALTER DATABASE scraping CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+ALTER TABLE pages CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE pages CHANGE title title VARCHAR(200) CHARACTER SET utf8mb4 COLLATE
+utf8mb4_unicode_ci;
+ALTER TABLE pages CHANGE content content VARCHAR(10000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-> Hier werden die Character-Sets von utf8mb4 auf utf8mb4_unicode_ci konvertiert
+
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+import datetime
+import random
+import pymysql
+
+conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock',
+user='root', passwd=None, db='mysql', charset='utf8')
+cur = conn.cursor()
+cur.execute("USE scraping")
+random.seed(datetime.datetime.now())
+
+def store(title, content):
+	cur.execute("INSERT INTO pages (title, content) VALUES (\"%s\",\"%s\")", (title, content))
+	cur.connection.commit()
+
+def getLinks(articleUrl):
+	html = urlopen("http://en.wikipedia.org"+articleUrl)
+	bsObj = BeautifulSoup(html)
+	title = bsObj.find("h1").find("span").get_text()
+	content = bsObj.find("div", {"id":"mw-content-text"}).find("p").get_text()
+	store(title, content)
+	return bsObj.find("div", {"id":"bodyContent"}).findAll("a",href=re.compile("^(/wiki/)((?!:).)*$"))
+
+links = getLinks("/wiki/Kevin_Bacon")
+try:
+	while len(links) > 0:
+		newArticle = links[random.randint(0, len(links)-1)].attrs["href"]
+	print(newArticle)
+	links = getLinks(newArticle)
+finally:
+	cur.close()
+	conn.close()
+
+-> Hier handelt es sich um den Wikipedia Scraper von vorher, mit dessen Hilfe die Daten der Wikiseite in die vorher angelegte MySQL Datenbank
+	eingegeben werden
+
+http://legacy.python.org/dev/peps/pep-0249/#paramstyle
+-> Website für die Dokumentation für PyMySQL
+
+Abfrage:
+
+>SELECT * FROM dictionary WHERE definition="A small furry animal that says meow";
++------+-------+-------------------------------------+
+| id  | word | definition|
++------+-------+-------------------------------------+
+| 200 | cat  | A small furry animal that says meow |
++------+-------+-------------------------------------+
+1 row in set (0.00 sec)
+
+Trick um diese Abfrage als Index anhand der Definiton schneller zu machen:
+CREATE INDEX definition ON dictionary (id, definition(16));
+
+-> Nur die ersten 16 Buchstaben einer Definition werden nun herangezogen um das Objekt anhand der Definiton zu suchen
+	bzw die id anhand der Definiton zu finden in einem dictionary
+
+query time versus database size ->one of the fundamental balancing acts in database engineering
+
++--------+--------------+------+-----+---------+-------------------+
+| Field  | Type               | Null | Key | Default | Extra       |
++--------+--------------------+------+-----+---------+-------------+
+| id     | int(11)            | NO   | PRI | NULL | auto_increment |
+| url    | varchar(200)       | YES  |     | NULL |		   |
+| phrase | varchar(200)       | YES  |     | NULL |		   |
++--------+--------------+------+-----+---------+-------------------+
+
+-> Problem bei dieser Art der Speicherung ist dass viele Duplikate unter den Objekten sein können
+ 
+>DESCRIBE phrases
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra|
++--------+--------------+------+-----+---------+----------------+
+| id     | int(11)      | NO   | PRI | NULL    | auto_increment |
+| phrase | varchar(200) | YES  |     | NULL    |		|
++--------+--------------+------+-----+---------+----------------+
+>DESCRIBE urls
++-------+--------------+------+-----+---------+----------------+
+| Field | Type         | Null | Key | Default | Extra          |
++-------+--------------+------+-----+---------+----------------+
+| id    | int(11)      | NO   | PRI | NULL    | auto_increment |
+| url   | varchar(200) | YES  |     | NULL    |		       |
++-------+--------------+------+-----+---------+----------------+
+>DESCRIBE foundInstances
++-------------+---------+------+-----+---------+----------------+
+| Field	      | Type    | Null | Key | Default | Extra          |
++-------------+---------+------+-----+---------+----------------+
+| id          | int(11) | NO   | PRI | NULL    | auto_increment |
+| urlId       | int(11) | YES  |     | NULL    |                |
+| phraseId    | int(11) | YES  |     | NULL    |                |
+| occurrences | int(11) | YES  |     | NULL    |                |
++-------------+---------+------+-----+---------+----------------+
+
+Diese Art der Darstellung ist besser um Duplikate zu vermeiden
+
+Datenbank für Wikiseite:
+
+CREATE TABLE `wikipedia`.`pages` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`url` VARCHAR(255) NOT NULL,
+`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (`id`));
+CREATE TABLE `wikipedia`.`links` (
+`id` INT NOT NULL AUTO_INCREMENT,
+`fromPageId` INT NULL,
+`toPageId` INT NULL,
+`created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (`id`));
+
+-> Keine Seitentitel inkludiert, da Referenzen gespeichert werden ohne diese Seiten zwingend zu besuchen, dh kann man vorher den Titel nicht sehen
+
+from urllib.request import urlopen.
+from bs4 import BeautifulSoup
+import re
+import pymysql
+
+conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock', user='root', passwd=None, db='mysql', charset='utf8')
+cur = conn.cursor()
+cur.execute("USE wikipedia")
+
+def insertPageIfNotExists(url):
+	cur.execute("SELECT * FROM pages WHERE url = %s", (url))
+	if cur.rowcount == 0:
+		cur.execute("INSERT INTO pages (url) VALUES (%s)", (url))
+		conn.commit()
+		return cur.lastrowid
+	else:
+	return cur.fetchone()[0]
+
+def insertLink(fromPageId, toPageId):
+	cur.execute("SELECT * FROM links WHERE fromPageId = %s AND toPageId = %s",(int(fromPageId), int(toPageId)))
+	if cur.rowcount == 0:
+		cur.execute("INSERT INTO links (fromPageId, toPageId) VALUES (%s, %s)",(int(fromPageId), int(toPageId)))
+	conn.commit()
+pages = set()
+
+def getLinks(pageUrl, recursionLevel):
+	global pages
+	if recursionLevel > 4:
+		return;
+	pageId = insertPageIfNotExists(pageUrl)
+	html = urlopen("http://en.wikipedia.org"+pageUrl)
+	bsObj = BeautifulSoup(html)
+	for link in bsObj.findAll("a",href=re.compile("^(/wiki/)((?!:).)*$")):
+		insertLink(pageId, insertPageIfNotExists(link.attrs['href']))
+		if link.attrs['href'] not in pages:
+		#We have encountered a new page, add it and search it for links
+			newPage = link.attrs['href']
+			pages.add(newPage)
+getLinks(newPage, recursionLevel+1)
+getLinks("/wiki/Kevin_Bacon", 0)
+cur.close()
+conn.close()
