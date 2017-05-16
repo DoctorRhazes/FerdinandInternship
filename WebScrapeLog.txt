@@ -472,14 +472,19 @@ MYSQL und Python
 Mit diesem Python code kann man mithilfe von PyMySQL mit MySQL interagieren:
 
 import pymysql
-conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock',
-user='root', passwd=None, db='mysql')
+conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock', user='root', passwd=None, db='mysql')
 cur = conn.cursor()
 cur.execute("USE scraping")
 cur.execute("SELECT * FROM pages WHERE id=1")
 print(cur.fetchone())
 cur.close()
 conn.close()
+
+[with cur as ...
+with file.open as f:
+	# Anwendung zB
+# ist ab hier wieder geschlossen
+-> macht automatisch wieder zu nach Beenden der Anwendung]
 
 -> Zwei relevante Objekte: connection Objekt und corsor Objekt
 -> cursor: enthält statusinformationen zur db, info welche db verwendet wird, letzte abfrage der db etc.
@@ -650,3 +655,103 @@ getLinks(newPage, recursionLevel+1)
 getLinks("/wiki/Kevin_Bacon", 0)
 cur.close()
 conn.close()
+
+
+EMAILS AUSLESEN
+
+HTTP = Websiteprotokoll
+SMTP = EmailProtokoll
+
+In Python:
+import smtplib
+from email.mime.text import MIMEText
+msg = MIMEText("The body of the email is here")
+msg['Subject'] = "An Email Alert"
+msg['From'] = "ryan@pythonscraping.com"
+msg['To'] = "webmaster@pythonscraping.com"
+s = smtplib.SMTP('localhost')
+s.send_message(msg)
+s.quit()
+
+so kann eine email versendet werden. Vorraussetzung: 'localhost' entweder lokaler SMTP Server (lt Buch mühsam zum Aufsetzen) oder
+remote SMTP dh jew. Anbieter.
+
+DOKUMENTE LESEN
+
+Beispielcode um ein Textfile von einer Seite zu lesen:
+
+from urllib.request import urlopen
+textPage = urlopen(
+"http://www.pythonscraping.com/pages/warandpeace/chapter1.txt")
+print(textPage.read())
+
+Dieses Beispiel ist dazu da um zu demonstrieren was passiert wenn man ein Dokument im falschen encoding ließt:
+from urllib.request import urlopen
+textPage = urlopen("http://www.pythonscraping.com/pages/warandpeace/chapter1-ru.txt")
+print(textPage.read())
+
+Problem gelöst:
+from urllib.request import urlopen
+textPage = urlopen("http://www.pythonscraping.com/pages/warandpeace/chapter1-ru.txt")
+print(str(textPage.read(), "utf-8"))
+
+Mit BeautifulSoup geht es etwas komplizierter:
+html = urlopen("http://en.wikipedia.org/wiki/Python_(programming_language)")
+bsObj = BeautifulSoup(html)
+content = bsObj.find("div", {"id":"mw-content-text"}).get_text()
+content = bytes(content, "UTF-8")
+content = content.decode("UTF-8")
+
+Beispiele für website Tags die angeben welches encoding vorhanden ist:
+<meta charset="utf-8" />
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+CSV LESEN
+
+Dieses Python Skript ließt eine .csv Datei aus dem Internet aus;
+Sie muss zuerst in ein StringIO Objekt konvertiert werden, da die "csv" library von Python
+csv lesen direkt aus dem Internet (und daher aus dem Memomry Speicher) nicht unterstützt:
+
+from urllib.request import urlopen
+from io import StringIO
+import csv
+data = urlopen("http://pythonscraping.com/files/MontyPythonAlbums.csv")
+.read().decode('ascii', 'ignore')
+dataFile = StringIO(data)
+csvReader = csv.reader(dataFile)
+for row in csvReader:
+print(row)
+
+.....wird mit print(row) Zeilenweise als String ausgegeben
+
+Da csv.reader ein iterable-Objekt zurückgibt, kann es so ausgelesen werden:
+for row in csvReader:
+	print("The album \""+row[0]+"\" was released in "+str(row[1]))
+
+Woran man sieht, dass auch dieses Konstrukt in Python valide ist, in Java wäre es unmöglich.
+
+Eine einfachere Variante für dieses Programm wo die csv Datei in ein dict konvertiert wird,  anstatt in ein listen-Objekt:
+
+from urllib.request import urlopen
+from io import StringIO
+import csv
+data = urlopen("http://pythonscraping.com/files/MontyPythonAlbums.csv")
+.read().decode('ascii', 'ignore')
+dataFile = StringIO(data)
+dictReader = csv.DictReader(dataFile)
+print(dictReader.fieldnames)
+for row in dictReader:
+	print(row)
+
+....jede Reihe der csv Datei wird in .dict Objekte konvertiert, mit .fieldnames lassen sich die Spaltennamen auslesen.
+print(row) gibt jede Zeile als dict aus
+
+PDF lesen
+
+PDFMiner3K ist eine relativ einfach zu verwendende Library um PDF Files auszulesen.
+
+noch zu lesen:
+	[9],10,12,14
+
+
