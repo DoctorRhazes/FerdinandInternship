@@ -754,4 +754,193 @@ PDFMiner3K ist eine relativ einfach zu verwendende Library um PDF Files auszules
 noch zu lesen:
 	[9],10,12,14
 
+SCRAPING MIT JAVASCRIPT
 
+Client-seitige Programmiersprachen: zB.: JavaScript, wird im Browser ausgeführt (gegenteil: Server-seitig, zB php)
+JavaScript im HTML Code erkennen: zwischen den <script> </script> Tags.
+
+Browser WebDeveloper Console in FireFox aktivieren: Ctrl+Shift+K
+<script>
+function fibonacci(a, b){
+var nextNum = a + b;
+console.log(nextNum+" is in the Fibonacci sequence");
+if(nextNum < 100){
+fibonacci(b, nextNum);
+}
+}
+</script>
+
+-> Wird das Programm als .html Datei dh eingebettet in den html std Text ausgeführt, dann kann man in der Console zB.: "fibonacci(1,1)" eingeben
+und console.log gibt das entsprechende aus!
+
+Weiters js Beispiel:
+
+var fibonacci = function() {
+var a = 1;
+var b = 1;
+return function () {
+var temp = b;
+b = a + b;
+a = temp;
+return b;
+}
+}
+var fibInstance = fibonacci();
+console.log(fibInstance()+" is in the Fibonacci sequence");
+console.log(fibInstance()+" is in the Fibonacci sequence");
+console.log(fibInstance()+" is in the Fibonacci sequence");
+
+-> function() {} deklariert eine namenlose func, imGegensatz zu function Name(..){}
+-> eine funktion kann eine Funktion zurückgeben
+-> eine funktion kann in einer variable gespeichert werden
+-> jede variable beginnt mit var
+-> eine variable die eine funktion speichert kann mit [varName](..); ausgeführt werden
+-> jedes mal wenn fibinstance() aufgerufen wird, bleiben die Variablen von vorher erhalten und nur der return Part wird weiter ausgeführt....?
+
+JQUERY
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></
+script>
+-> Vorsicht beim WebScraping: JQuery ändert den HTML Code einer Seite dynamisch nachdem JavaScript ausgeführt wurde;
+Beim normalen Scraping bedeutet das, dass nur die vor-geladene Seite durchsucht wird, nicht was rauskommt wenn JQuery ausgeführt wurde
+-> va animation, interactiver Content, eingebettete Medien
+
+GOOGLE ANALYTICS:
+
+populäre .js library und Tool um User zu tracken
+
+Beispiel:
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4591498-1']);
+_gaq.push(['_setDomainName', 'oreilly.com']);
+_gaq.push(['_addIgnoredRef', 'oreilly.com']);
+_gaq.push(['_setSiteSpeedSampleRate', 50]);
+_gaq.push(['_trackPageview']);
+(function() { var ga = document.createElement('script'); ga.type =
+'text/javascript'; ga.async = true; ga.src = ('https:' ==
+document.location.protocol ? 'https://ssl' : 'http://www') +
+'.google-analytics.com/ga.js'; var s =
+document.getElementsByTagName('script')[0];
+s.parentNode.insertBefore(ga, s); })();
+</script>
+
+Wenn die Seite Google Analytics verwendet muss man beim Scraping sichergehen, dass man diese Cookies entsorgt, will man als Scraper unerkannt bleiben
+
+GOOGLE MAPS MARKER
+So kann ein Marker in eine Google Map eingesetzt werden:
+
+var marker = new google.maps.Marker({
+position: new google.maps.LatLng(-25.363882,131.044922),
+map: map,
+title: 'Some marker text'
+});
+
+Google’s “reverse Geocoding” API kann aus lat/lng Daten Adressen hervorbringen
+
+AJAX
+
+kommuniziert mit Formularen, lädt Daten....
+Ajax kann mitunter den Inhalt einer Seite erst nach zwei Sekunden laden.
+Dagegen kann man die Library Selenium (änhlich BeautifulSoup) verwenden:
+
+from selenium import webdriver
+import time
+driver = webdriver.PhantomJS(executable_path='')
+driver.get("http://pythonscraping.com/pages/javascript/ajaxDemo.html")
+time.sleep(3)
+print(driver.find_element_by_id("content").text)
+driver.close()
+
+Statt print(driver.find_element_by_id("content").text) hätte für Selenium auch driver.find_element_by_css_selector("#content") und
+driver.find_element_by_tag_name("div") funktioniert.
+
+Wie bei find/findAll gibt es hier den Plural: driver.find_elements_by_css_selector("#content")
+driver.find_elements_by_css_selector("div")
+
+Alternativ kann man dann wieder auf BeautifulSoup übergreifen:
+pageSource = driver.page_source
+bsObj = BeautifulSoup(pageSource)
+print(bsObj.find(id="content").get_text())
+
+PHANTOMJS
+PhantomJS ist ein "headless" webbrowser..
+
+Selenium mit PhantomJS:
+driver = webdriver.PhantomJS(executable_path='/path/to/download/
+phantomjs-1.9.8-macosx/bin/phantomjs')
+-> PhantomJS muss installiert sein.
+
+Hier wird gewartet bis ein bestimmtes Element auf der Seite auftaucht, dann
+wird der Inhalt des Elementes ausgegeben
+
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+driver = webdriver.PhantomJS(executable_path='')
+driver.get("http://pythonscraping.com/pages/javascript/ajaxDemo.html")
+try:
+	element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "loadedButton")))
+finally:
+	print(driver.find_element_by_id("content").text)
+	driver.close()
+
+Das wird von Selenium als "implicit wait" bezeichnet, weil die Wartezeit davon abhängt wann ein bestimmtes Objekt auftaucht.
+
+EC.presence_of_element_located((By.ID, "loadedButton"))
+-> Hier wird ein "locator" verwendet, eine abstrakte query language, unter Verwendung des "By" Objektes.
+-> das element wird gefunden, aber nicht ausgewählt und abgespeichert wie bei einem selektor(BS: find und findAll)
+
+Ein locator kann verwendet werden, um einen Selektor zu erstellen:
+print(driver.find_element(By.ID, "content").text)
+oder, synonym: print(driver.find_element_by_id("content").text)
+
+Nomenklatur von Selenium:
+ID -> HTML id=
+CLASS_NAME -> HTML class =
+CSS_SELECTOR-> CSS #idName, .className, tagName
+LINK_TEXT -> HTML <a>
+PARTIAL_LINK_TEXT -> LINK_TEXT aber nur Teilstring
+NAME -> HTML name=
+TAG_NAME -> HTML ?tag name?
+XPATH -> XML Pfad. Ist eine Sprache mit eigenen Regeln die verwendet wird um XML Dokumente zu parsen
+
+REDIRECTS
+
+redirects können problematisch sein wenn sie Client-Seitig sind, da kann Pythons urllib nichts tun dagegen.
+-> JavaScript führt sowas aus
+
+Dieses Skript ruft ständig ein Element auf und testet, ob es noch da ist für einige Zeit,
+um zu sehen ob ein redirect stattgefunden hat:
+
+from selenium import webdriver
+import time
+from selenium.webdriver.remote.webelement import WebElement
+from selenium.common.exceptions import StaleElementReferenceException
+
+def waitForLoad(driver):
+	elem = driver.find_element_by_tag_name("html")
+	count = 0
+	while True:
+		count += 1
+		if count > 20:
+			print("Timing out after 10 seconds and returning")
+			return
+		time.sleep(.5)
+		try:
+			elem == driver.find_element_by_tag_name("html")
+		except StaleElementReferenceException:
+			return
+driver = webdriver.PhantomJS(executable_path='<Path to Phantom JS>')
+driver.get("http://pythonscraping.com/pages/javascript/redirectDemo1.html")
+waitForLoad(driver)
+print(driver.page_source)
+
+
+
+
+
+ 
