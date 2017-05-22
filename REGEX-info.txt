@@ -1,0 +1,30 @@
+////////extrem nützliche Website:
+http://www.regexpal.com/
+//////////////////REGEX TESTEN!!!
+REGEX Bauteile:
+
+[\.]+ /////ein Punkt 1x-inf
+
+[A-Z\+]+ /////A-Z ODER + 1x-inf
+
+(A-Z|\+) /////"A-Z" oder "+" 1x
+
+[A-Za-z]+ ///// Buchstabe groß/klein 1x-inf
+
+([A-Z]|\+) /////Buchstabe groß/klein OR "+" 1x-inf
+
+(a*b) ///// a 0x-inf UND b einmal
+
+a{2,3} ///// a zwei bis dreimal
+
+^a ///// a am Anfang des gesamten Ausdruckes
+
+[A-Z]+[0-9]+$ ///// Großbuchstaben 1x-inf Zahlen 1x-inf ENDE des gesamten Ausdruckes
+
+a$ ///// a am Ende des gesamten Ausdruckes
+
+((?![a]).) ///// NICHT-a mit einem Symbol dran eg "b"
+
+\ ///// wichtig für \. \\ etc
+
+Regex Beispiel: ((?!:).)* -> ein Komplex: eine unbestimmte Anzahl Zeichen aber NICHT ':'	

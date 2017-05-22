@@ -64,6 +64,53 @@ http://www.microsoft.com/en-us/download/details.aspx?id=44266
 
 Geht scrapy nur mit py 2.7?
 
+from urllib.request import urlopen
+from bs4 import BeautifulSoup
+html = urlopen("http://www.pythonscraping.com/pages/page3.html")
+bsObj = BeautifulSoup(html,"lxml")
+
+print(bsObj.find("img",{"src":"../img/gifts/img1.jpg"}).parent.previous_sibling.get_text())
+
+gibt 15$ aus
+
+"regular String" -> String der mit linearen Regeln beschrieben werden kann
+Beispiele: aa* -> a mindestens einmal
+bbbb -> b 4 mal
+(b | ) -> optional b
+(cc)* -> c eine gerade Anzahl an malen dh eine unbestimmte Anzahl an cc
+a* -> a 0 bis unendlich mal 
+
+////////extrem nützliche Website:
+http://www.regexpal.com/
+//////////////////REGEX TESTEN!!!
+REGEX Bauteile:
+
+[\.]+ /////ein Punkt 1x-inf
+
+[A-Z\+]+ /////A-Z ODER + 1x-inf
+
+(A-Z|\+) /////"A-Z" oder "+" 1x
+
+[A-Za-z]+ ///// Buchstabe groß/klein 1x-inf
+
+([A-Z]|\+) /////Buchstabe groß/klein OR "+" 1x-inf
+
+(a*b) ///// a 0x-inf UND b einmal
+
+a{2,3} ///// a zwei bis dreimal
+
+^a ///// a am Anfang des gesamten Ausdruckes
+
+[A-Z]+[0-9]+$ ///// Großbuchstaben 1x-inf Zahlen 1x-inf ENDE des gesamten Ausdruckes
+
+a$ ///// a am Ende des gesamten Ausdruckes
+
+((?![a]).) ///// NICHT-a mit einem Symbol dran eg "b"
+
+\ ///// wichtig für \. \\ etc
+
+Regex Beispiel: ((?!:).)* -> ein Komplex: eine unbestimmte Anzahl Zeichen aber NICHT ':'	
+
 Die 4 Arten der HTTP Server Requests:
 GET
 POST
@@ -137,6 +184,7 @@ fürs Python-Scraping
 Twitter Libraries für Py3 können runtergeladen und installiert werden
 
 Form um von Twitter Info(über eigene Tweets) einzuholen:
+
 from twitter import Twitter
 t = Twitter(auth=OAuth(<Access Token>,<Access Token Secret>,
 <Consumer Key>,<Consumer Secret>))
@@ -939,8 +987,26 @@ driver.get("http://pythonscraping.com/pages/javascript/redirectDemo1.html")
 waitForLoad(driver)
 print(driver.page_source)
 
+TorBrowser und PySocks:
 
+Dieses Script sollte über die Seite Icanhas... eine IP anzeigen die nicht die eigene ist.
+import socks
+import socket
+from urllib.request import urlopen
+socks.set_default_proxy(socks.SOCKS5, "localhost", 9150)
+socket.socket = socks.socksocket
+print(urlopen('http://icanhazip.com').read())
 
+-> 9150 ist der Default Port
 
+TorBrowser und Selenium:
 
- 
+Selbes Ergebnis wie mit PySocks zuvor:
+
+from selenium import webdriver
+service_args = [ '--proxy=localhost:9150', '--proxy-type=socks5', ]
+driver = webdriver.PhantomJS(executable_path='<path to PhantomJS>',
+service_args=service_args)
+driver.get("http://icanhazip.com")
+print(driver.page_source)
+driver.close()

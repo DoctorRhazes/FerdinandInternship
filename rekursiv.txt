@@ -1,0 +1,5 @@
+http://studentpoint.univie.ac.at/vor-dem-studium/?l=0
+http://studentpoint.univie.ac.at/durchs-studium/?l=0
+http://forschungsservice.univie.ac.at/
+http://intra.univie.ac.at/?l=0
+http://intra.univie.ac.at/themen-a-z/?tx_intraa2z_intraa2zfront[cat]=54&tx_intraa2z_intraa2zfront[theLetter]=L&tx_intraa2z_intraa2zfront[action]=show&tx_intraa2z_intraa2zfront[controller]=TopicalsA2Z&cHash=7ba9ed07a543a06bd7ac8fd86c626768&l=0
