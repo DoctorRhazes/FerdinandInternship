@@ -1,0 +1,88 @@
+strg-shift+i -> dev modus
+XPath auf Example.com,
+einzugeben in der Konsole bei Inspect Element
+$x('/html')
+[ <html>...</html> ]
+$x('/html/body')
+[ <body>...</body> ]
+$x('/html/body/div')
+[ <div>...</div> ]
+$x('/html/body/div/h1')
+[ <h1>Example Domain</h1> ]
+$x('/html/body/div/p')
+[ <p>...</p>, <p>...</p> ]
+$x('/html/body/div/p[1]')
+[ <p>...</p> ]
+$x('/html/body/div/p[2]')
+[ <p>...</p> ]
+
+(Inspect Element: Ctrl+Shift+C/Konsole: ..K)
+$x('//html/head/title')
+print($x('//html/head/title')); -> JavaScript Befehl!
+
+$x('//a[@href]')
+-> Alle a mit dem Attribut "href"
+$x('//a[@href="gibtsned"]')
+-> Alle a wo das Attribut href den folgenden Wert hat
+$x('//a[contains(@href,"www.")]')
+-> Alle die href enthalten, welches "www." enthält
+$x('//a[not(contains(@href,"www."))]')
+-> Das Gegenteil
+$x('//a[starts-with(@href,"www.")]')
+-> fängt an mit....
+
+https://www.w3schools.com/xml/xpath_syntax.asp
+-> Teil des Tutorials
+
+scrapy shell example.com
+-> response.xpath('//div').extract()
+	-> extrahiert alle div aus der geladenen Seite mit Scrapy
+-> response.xpath('//a/@href').extract() extrahiert das Attribut href von allen a
+-> response.xpath('//a/text()').extract() extrahiert den Text der auf das a-Tag folgt (der auf das a tag verweist)
+-> response.xpath('//a[starts-with(@href,"www.")]').extract()
+	-> extrahiert alle a deren href-Attribut einen Inhalt hat der mit "www." beginnt
+
+In Chrome geht unter Inspect Element auch "copy xpath"
+
+Weitere xpath:
+$x('//div[starts-with(@id,"menu") and starts-with(@class,"navbar")]')
+$x('//div[starts-with(@id,"top")]//div')
+$x('//*[contains(@class,"klasseninhalt")]//*')
+$x('//div[@id="top-row"]/@class')
+-> div mit der id, die Klasse(n) davon
+
+Buch: //*[text()="References"]/../following-sibling::div//a
+tag mit attr text()=.. folgend sibling->div davon alle a
+
+15:26 26.05.2017
+Vagrant installieren? Daweil nicht - schauen ob der Crawler auch so geht.
+-> Vagrant hat einen Webserver den man mit http://web:9312/ erreichen kann oder im Browser mit 
+http://localhost:9312/
+
+
+
+scrapy shell --pdb <website> -> um debugging zu aktivieren für eine Website
+
+
+scrapy shell https://www.wetter.at
+-> Output "response <200.. -> heißt der content wurde erfolgreich geladen
+
+response.body[:50] -> erste 50 Zeichen unter <body> 
+
+response.xpath('//meta[starts-with(@name,"descr")]/@content').extract()
+-> den content vom meta tag dessen name attributs-wert mit "descr" anfängt
+
+response.xpath('//*[@type="text/javascript"][1]/text()').extract()
+-> gibt einen Teil vom javascript text aus von einem Tag in der Mitte, Logik nicht ganz klar, va [1]
+->[0] gibt nix aus
+
+response.xpath('//script[@type="text/javascript"][2]/text()').extract()
+-> gibt ein weiteres script tag aus
+
+-> Derweil nicht durchschaubar
+
+response.xpath('//*[@itemprop="price"][1]/text()').re('[.0-9]+')
+-> statt extract() sucht regular expression-matches, idf ein oder mehrere zeichen/zahlen, aber nicht inkludiert unicode charactere(dh kein \xa) (aus dem Buch)
+
+response.xpath() ohne .extract() gibt ein SELEKTOR Objekt zurück!
+
